@@ -18,13 +18,14 @@ namespace Sdl {
 
         void close();
 
-        void render(int, int, int);
+        void render(float, float, int);
 
         void draw();
 
     private:
         SDL_Window* window;         //The window we'll render to
         SDL_Renderer* renderer;     //The use of a renderer means we can use the GPU for our display
+        SDL_Texture* background;
         SDL_Rect playerSprite;
         SDL_Rect enemySprite;
         //TODO add other sprites

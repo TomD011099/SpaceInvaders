@@ -4,16 +4,14 @@
 #include "../../Abs/Entities/PlayerShip.h"
 #include "../Window/SDLWindow.h"
 
-namespace Sdl{
-    class SDLPlayerShip : public Abs::PlayerShip{
+namespace Sdl {
+    class SDLPlayerShip : public Abs::PlayerShip {
     public:
-        SDLPlayerShip(Sdl::SDLWindow*);
-
-        SDLPlayerShip(Sdl::SDLWindow*, float, float);
+        SDLPlayerShip(Sdl::SDLWindow*, float, float, int, int);
 
         void visualize();
 
-        void update(int);
+        void update(EVENT);
 
     private:
         SDLWindow* window;

@@ -4,6 +4,19 @@ Game::Game(Abs::Factory* absFactory) {
     gameFactory = absFactory;
 }
 
+/*
+ * Coordinates:
+ *
+ *    0                             1
+ *  0 x----------------------------->
+ *    |
+ *    |
+ *    |
+ *    |
+ *    |
+ *  1 v
+ *
+ */
 void Game::run() {
     Abs::Controller* controller = gameFactory->createController();
     Abs::PlayerShip* playerShip = gameFactory->createPlayerShip();
@@ -12,12 +25,13 @@ void Game::run() {
     Abs::EnemyShip* enemyShip = gameFactory->createEnemyShip();
     gameEntities.push_front(enemyShip);
 
-    while(controller->pollEvents() != CTRL_QUIT) {
-        int event = controller->pollEvents();
+    EVENT event = CTRL_IDLE;
 
-        for (auto entity: gameEntities) {
+    while(event != CTRL_QUIT) {
+        event = controller->pollEvents();
+
+        for (Abs::Entity* entity: gameEntities) {
             entity->update(event);
-            entity->visualize();
         }
 
         gameFactory->draw();

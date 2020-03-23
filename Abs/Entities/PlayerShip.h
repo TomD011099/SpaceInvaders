@@ -6,7 +6,7 @@
 namespace Abs{
     class PlayerShip: public PlayerEntity {
     public:
-        PlayerShip(float, float);
+        PlayerShip(float, float, int, int);
 
         virtual void visualize() = 0;
     };

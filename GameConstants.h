@@ -1,23 +1,18 @@
 #ifndef SPACEINVADERS_GAMECONSTANTS_H
 #define SPACEINVADERS_GAMECONSTANTS_H
 
-const int SCREEN_HEIGHT = 500;
-const int SCREEN_WIDTH = 500;
+const int DEFAULT_SCREEN_WIDTH = 1000;
+const int DEFAULT_SCREEN_HEIGHT = 700;
 
 const int SCREEN_FPS = 60;
 const int SCREEN_TICK_PER_FRAME = 1000 / SCREEN_FPS;
 
-const int CTRL_QUIT = 1;
-const int CTRL_IDLE = 0;
-const int CTRL_PRESS_LEFT = 2;
-const int CTRL_REL_LEFT = 3;
-const int CTRL_PRESS_RIGHT = 4;
-const int CTRL_REL_RIGHT = 5;
-const int CTRL_PRESS_SPACE = 6;
+enum EVENT {CTRL_QUIT, CTRL_IDLE, CTRL_LEFT, CTRL_RIGHT, CTRL_SHOOT};
 
 const int PLAYERSHIP = 10;
 const int ENEMYSHIP = 11;
 
-const float PLAYER_SPEED = 10;
+const float PLAYER_SPEED = 1.5;
+const float NORMALISED_SPEED = PLAYER_SPEED/ SCREEN_FPS;
 
 #endif

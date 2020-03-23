@@ -6,7 +6,7 @@
 namespace Abs {
     class Controller {
     public:
-        virtual int pollEvents() = 0;
+        virtual EVENT pollEvents() = 0;
     };
 }
 

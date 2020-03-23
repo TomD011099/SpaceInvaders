@@ -30,8 +30,8 @@ bool Sdl::SDLWindow::init() {
     }
 
     //Create window
-    window = SDL_CreateWindow("SpaceInvaders", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
-                              SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    window = SDL_CreateWindow("SpaceInvaders", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, DEFAULT_SCREEN_WIDTH,
+                              DEFAULT_SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     if (window == nullptr) {
         std::cout << "Window could not be created! SDL Error: " << SDL_GetError() << "\n";
         success = false;
@@ -43,7 +43,7 @@ bool Sdl::SDLWindow::init() {
             success = false;
         } else {
             //Initialize renderer color
-            SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+            SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
 
             //Initialize PNG loading
             int imgFlags = IMG_INIT_PNG;
@@ -67,21 +67,35 @@ bool Sdl::SDLWindow::loadMedia() {
     spriteSheetTexture = new Sdl::LTexture(renderer);
 
     //Load sprite sheet texture
-    if (!spriteSheetTexture->loadFromFile("../Media/im.png")) {
+    if (!spriteSheetTexture->loadFromFile("../Media/spritesheet.png")) {
         std::cout << "Failed to load sprite sheet texture!\n";
         success = false;
     } else {
         //Set top left sprite
-        playerSprite.x = 0;
-        playerSprite.y = 0;
-        playerSprite.w = 15;
-        playerSprite.h = 15;
+        playerSprite.x = 150;
+        playerSprite.y = 638;
+        playerSprite.w = 73;
+        playerSprite.h = 52;
 
         //Set enemy sprite
-        enemySprite.x = 7;
-        enemySprite.y = 7;
-        enemySprite.w = 15;
-        enemySprite.h = 15;
+        enemySprite.x = 19;
+        enemySprite.y = 14;
+        enemySprite.w = 110;
+        enemySprite.h = 80;
+    }
+
+    SDL_Surface* loadedSurface = IMG_Load("../Media/background.jpeg");
+    if (loadedSurface == nullptr) {
+        printf("Unable to load image %s! SDL_image Error: %s\n", "../Media/background.jpeg", IMG_GetError());
+    } else {
+        //Create texture from surface pixels
+        background = SDL_CreateTextureFromSurface(renderer, loadedSurface);
+        if (background == nullptr) {
+            printf("Unable to create texture from %s! SDL Error: %s\n", "../Media/background.jpeg", SDL_GetError());
+        }
+
+        //Get rid of old loaded surface
+        SDL_FreeSurface(loadedSurface);
     }
 
     return success;
@@ -99,13 +113,19 @@ void Sdl::SDLWindow::close() {
     SDL_Quit();
 }
 
-void Sdl::SDLWindow::render(int x, int y, int type) {
+void Sdl::SDLWindow::render(float x, float y, int type) {
+    float SDLx, SDLy;
+
     switch (type) {
         case PLAYERSHIP:
-            spriteSheetTexture->render(x, y, &playerSprite);
+            SDLx = x * (DEFAULT_SCREEN_WIDTH - static_cast<float>(playerSprite.w));
+            SDLy = y * (DEFAULT_SCREEN_HEIGHT - static_cast<float>(playerSprite.h));
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), &playerSprite);
             break;
         case ENEMYSHIP:
-            spriteSheetTexture->render(x, y, &enemySprite);
+            SDLx = x * (DEFAULT_SCREEN_WIDTH - static_cast<float>(enemySprite.w));
+            SDLy = y * (DEFAULT_SCREEN_HEIGHT - static_cast<float>(enemySprite.h));
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), &enemySprite);
             break;
         default:
             break;
@@ -133,4 +153,5 @@ void Sdl::SDLWindow::draw() {
 
     //Clear renderer
     SDL_RenderClear(renderer);
+    SDL_RenderCopy(renderer, background, nullptr, nullptr);
 }

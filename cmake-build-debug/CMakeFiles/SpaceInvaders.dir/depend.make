@@ -8,47 +8,57 @@ CMakeFiles/SpaceInvaders.dir/Abs/Controller.cpp.obj: ../GameConstants.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/BonusEntity.cpp.obj: ../Abs/Entities/BonusEntity.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/BonusEntity.cpp.obj: ../Abs/Entities/BonusEntity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/BonusEntity.cpp.obj: ../Abs/Entities/Entity.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/BonusEntity.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyBullet.cpp.obj: ../Abs/Entities/EnemyBullet.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyBullet.cpp.obj: ../Abs/Entities/EnemyBullet.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyBullet.cpp.obj: ../Abs/Entities/EnemyEntity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyBullet.cpp.obj: ../Abs/Entities/Entity.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyBullet.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyEntity.cpp.obj: ../Abs/Entities/EnemyEntity.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyEntity.cpp.obj: ../Abs/Entities/EnemyEntity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyEntity.cpp.obj: ../Abs/Entities/Entity.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyEntity.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyShip.cpp.obj: ../Abs/Entities/EnemyEntity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyShip.cpp.obj: ../Abs/Entities/EnemyShip.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyShip.cpp.obj: ../Abs/Entities/EnemyShip.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyShip.cpp.obj: ../Abs/Entities/Entity.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyShip.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/Entity.cpp.obj: ../Abs/Entities/Entity.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/Entity.cpp.obj: ../Abs/Entities/Entity.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/Entity.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/NegBonus.cpp.obj: ../Abs/Entities/BonusEntity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/NegBonus.cpp.obj: ../Abs/Entities/Entity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/NegBonus.cpp.obj: ../Abs/Entities/NegBonus.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/NegBonus.cpp.obj: ../Abs/Entities/NegBonus.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/NegBonus.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerBullet.cpp.obj: ../Abs/Entities/Entity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerBullet.cpp.obj: ../Abs/Entities/PlayerBullet.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerBullet.cpp.obj: ../Abs/Entities/PlayerBullet.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerBullet.cpp.obj: ../Abs/Entities/PlayerEntity.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerBullet.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerEntity.cpp.obj: ../Abs/Entities/Entity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerEntity.cpp.obj: ../Abs/Entities/PlayerEntity.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerEntity.cpp.obj: ../Abs/Entities/PlayerEntity.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerEntity.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj: ../Abs/Entities/Entity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj: ../Abs/Entities/PlayerEntity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj: ../Abs/Entities/PlayerShip.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj: ../Abs/Entities/PlayerShip.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.obj: ../Abs/Entities/BonusEntity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.obj: ../Abs/Entities/Entity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.obj: ../Abs/Entities/PosBonus.cpp
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.obj: ../Abs/Entities/PosBonus.h
+CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj: ../Abs/Controller.h
 CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj: ../Abs/Entities/EnemyEntity.h
@@ -74,6 +84,7 @@ CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../GameConstants.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../Abs/Entities/EnemyBullet.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../Abs/Entities/EnemyEntity.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../Abs/Entities/Entity.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../GameConstants.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../SDL/Entities/SDLEnemyBullet.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../SDL/Entities/SDLEnemyBullet.h
 
@@ -136,12 +147,14 @@ CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj: ../SDL/Window/SD
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.obj: ../Abs/Entities/BonusEntity.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.obj: ../Abs/Entities/Entity.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.obj: ../Abs/Entities/NegBonus.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.obj: ../GameConstants.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.obj: ../SDL/Entities/SDLNegBonus.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.obj: ../SDL/Entities/SDLNegBonus.h
 
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../Abs/Entities/Entity.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../Abs/Entities/PlayerBullet.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../Abs/Entities/PlayerEntity.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../GameConstants.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../SDL/Entities/SDLPlayerBullet.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../SDL/Entities/SDLPlayerBullet.h
 
@@ -204,6 +217,7 @@ CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerShip.cpp.obj: ../SDL/Window/S
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.obj: ../Abs/Entities/BonusEntity.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.obj: ../Abs/Entities/Entity.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.obj: ../Abs/Entities/PosBonus.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.obj: ../GameConstants.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.obj: ../SDL/Entities/SDLPosBonus.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.obj: ../SDL/Entities/SDLPosBonus.h
 

@@ -10,7 +10,7 @@ namespace Sdl {
     public:
         SDLController();
 
-        int pollEvents();
+        EVENT pollEvents();
 
     private:
         SDL_Event e;

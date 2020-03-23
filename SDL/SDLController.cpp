@@ -4,29 +4,31 @@ Sdl::SDLController::SDLController() {
 
 }
 
-int Sdl::SDLController::pollEvents() {
+EVENT Sdl::SDLController::pollEvents() {
+    EVENT event = CTRL_IDLE;
+
     if (SDL_PollEvent(&e) != 0) {
         switch (e.type) {
             case SDL_QUIT:
-                std::cout << "Exit\n";
-                return CTRL_QUIT;
+                event = CTRL_QUIT;
+                break;
             case SDL_KEYDOWN:
                 switch (e.key.keysym.sym) {
                     case SDLK_LEFT:
-                        std::cout << "Left\n";
-                        return CTRL_PRESS_LEFT;
+                        event = CTRL_LEFT;
+                        break;
                     case SDLK_RIGHT:
-                        std::cout << "Right\n";
-                        return CTRL_PRESS_RIGHT;
+                        event = CTRL_RIGHT;
+                        break;
                     case SDLK_SPACE:
-                        std::cout << "Space\n";
-                        return CTRL_PRESS_SPACE;
+                        event = CTRL_SHOOT;
+                        break;
                     case SDLK_x:
-                        std::cout << "Exit\n";
-                        return CTRL_QUIT;
+                        event = CTRL_QUIT;
+                        break;
                 }
         }
     }
 
-    return CTRL_IDLE;
+    return event;
 }

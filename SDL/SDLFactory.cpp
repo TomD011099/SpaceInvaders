@@ -12,11 +12,11 @@ Sdl::SDLFactory::~SDLFactory() {
 }
 
 Abs::PlayerShip* Sdl::SDLFactory::createPlayerShip() {
-    return new Sdl::SDLPlayerShip(window, 250, 250);
+    return new Sdl::SDLPlayerShip(window, 0.5, 0.9, 73, 52);
 }
 
 Abs::EnemyShip* Sdl::SDLFactory::createEnemyShip() {
-    return new Sdl::SDLEnemyShip(window);
+    return new Sdl::SDLEnemyShip(window, 0.1, 0.1, 110, 80);
 }
 
 Abs::Controller* Sdl::SDLFactory::createController() {
