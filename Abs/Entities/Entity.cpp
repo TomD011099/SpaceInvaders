@@ -1,6 +1,6 @@
 #include "Entity.h"
 
-Abs::Entity::Entity(float x, float y, int w, int h) {
+Abs::Entity::Entity(float x, float y, float w, float h) {
     xPos = x;
     yPos = y;
     width = w;

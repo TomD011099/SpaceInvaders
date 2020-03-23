@@ -30,6 +30,8 @@ void Game::run() {
     while(event != CTRL_QUIT) {
         event = controller->pollEvents();
 
+        gameFactory->setupFrame();
+
         for (Abs::Entity* entity: gameEntities) {
             entity->update(event);
         }

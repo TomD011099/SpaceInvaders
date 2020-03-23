@@ -18,9 +18,11 @@ namespace Sdl {
 
         void close();
 
-        void render(float, float, int);
+        void render(float, float, float, float, ENTITY);
 
         void draw();
+
+        void setup();
 
     private:
         SDL_Window* window;         //The window we'll render to

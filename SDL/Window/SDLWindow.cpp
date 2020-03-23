@@ -113,8 +113,10 @@ void Sdl::SDLWindow::close() {
     SDL_Quit();
 }
 
-void Sdl::SDLWindow::render(float x, float y, int type) {
-    float SDLx, SDLy;
+void Sdl::SDLWindow::render(float x, float y, float w, float h, ENTITY type) {
+    float SDLx, SDLy, SDLw, SDLh;
+
+    //TODO change static_cast<float>(playerSprite.w) to SDLw and make sure sprites are scaled to w and h
 
     switch (type) {
         case PLAYERSHIP:
@@ -153,5 +155,8 @@ void Sdl::SDLWindow::draw() {
 
     //Clear renderer
     SDL_RenderClear(renderer);
+}
+
+void Sdl::SDLWindow::setup() {
     SDL_RenderCopy(renderer, background, nullptr, nullptr);
 }

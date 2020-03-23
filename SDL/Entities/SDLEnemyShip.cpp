@@ -9,6 +9,6 @@ void Sdl::SDLEnemyShip::visualize() {
 }
 
 void Sdl::SDLEnemyShip::update(EVENT) {
-
+    visualize();
 }
 

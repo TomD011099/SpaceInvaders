@@ -50,6 +50,8 @@ namespace Sdl {
 
         void draw();
 
+        void setupFrame();
+
     private:
         SDLWindow* window;
     };

@@ -6,7 +6,7 @@
 namespace Abs {
     class Entity {
     public:
-        Entity(float, float, int, int);
+        Entity(float, float, float, float);
 
         virtual void visualize() = 0;
 
@@ -19,8 +19,8 @@ namespace Abs {
     protected:
         float xPos;
         float yPos;
-        int width;
-        int height;
+        float width;
+        float height;
     };
 }
 
