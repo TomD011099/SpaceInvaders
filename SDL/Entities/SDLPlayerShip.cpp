@@ -1,14 +1,14 @@
 #include "SDLPlayerShip.h"
 
-Sdl::SDLPlayerShip::SDLPlayerShip(Sdl::SDLWindow* window, float x, float y, int w, int h) : PlayerShip(x, y, w, h){
+Sdl::SDLPlayerShip::SDLPlayerShip(Sdl::SDLWindow* window, float x, float y, float w, float h) : PlayerShip(x, y, w, h){
     this->window = window;
 }
 
 void Sdl::SDLPlayerShip::visualize() {
-    window->render(xPos, yPos, PLAYERSHIP);
+    window->render(xPos, yPos, width, height, PLAYERSHIP);
 }
 
-void Sdl::SDLPlayerShip::update(EVENT event) {
+bool Sdl::SDLPlayerShip::update(EVENT event) {
     switch (event) {
         case CTRL_LEFT:
             if (xPos - NORMALISED_SPEED >= 0)
@@ -27,4 +27,5 @@ void Sdl::SDLPlayerShip::update(EVENT event) {
     }
 
     visualize();
+    return true;
 }

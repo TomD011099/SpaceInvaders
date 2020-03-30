@@ -82,6 +82,11 @@ bool Sdl::SDLWindow::loadMedia() {
         enemySprite.y = 14;
         enemySprite.w = 110;
         enemySprite.h = 80;
+
+        playerBulletSprite.x = 533;
+        playerBulletSprite.y = 394;
+        playerBulletSprite.w = 9;
+        playerBulletSprite.h = 51;
     }
 
     SDL_Surface* loadedSurface = IMG_Load("../Media/background.jpeg");
@@ -116,19 +121,20 @@ void Sdl::SDLWindow::close() {
 void Sdl::SDLWindow::render(float x, float y, float w, float h, ENTITY type) {
     float SDLx, SDLy, SDLw, SDLh;
 
-    //TODO change static_cast<float>(playerSprite.w) to SDLw and make sure sprites are scaled to w and h
+    SDLw = w * DEFAULT_SCREEN_WIDTH;
+    SDLh = h * DEFAULT_SCREEN_HEIGHT;
+    SDLx = x * (DEFAULT_SCREEN_WIDTH - SDLw);
+    SDLy = y * (DEFAULT_SCREEN_HEIGHT - SDLh);
 
     switch (type) {
         case PLAYERSHIP:
-            SDLx = x * (DEFAULT_SCREEN_WIDTH - static_cast<float>(playerSprite.w));
-            SDLy = y * (DEFAULT_SCREEN_HEIGHT - static_cast<float>(playerSprite.h));
-            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), &playerSprite);
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &playerSprite);
             break;
         case ENEMYSHIP:
-            SDLx = x * (DEFAULT_SCREEN_WIDTH - static_cast<float>(enemySprite.w));
-            SDLy = y * (DEFAULT_SCREEN_HEIGHT - static_cast<float>(enemySprite.h));
-            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), &enemySprite);
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &enemySprite);
             break;
+        case PLAYERBULLET:
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &playerBulletSprite);
         default:
             break;
     }
@@ -138,7 +144,7 @@ void Sdl::SDLWindow::draw() {
     capTimer->start();
 
     //Calculate and correct fps
-    float avgFPS = countedFrames / (fpsTimer->getTicks() / 1000.f);
+    float avgFPS = static_cast<float> (countedFrames) / (fpsTimer->getTicks() / 1000.f);
     if (avgFPS > 2000000) {
         avgFPS = 0;
     }

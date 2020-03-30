@@ -7,11 +7,11 @@
 namespace Sdl {
     class SDLEnemyShip : public Abs::EnemyShip {
     public:
-        SDLEnemyShip(Sdl::SDLWindow*, float, float, int, int);
+        SDLEnemyShip(Sdl::SDLWindow*, float, float, float , float);
 
         void visualize();
 
-        void update(EVENT);
+        bool update(EVENT);
 
     private:
         SDLWindow* window;

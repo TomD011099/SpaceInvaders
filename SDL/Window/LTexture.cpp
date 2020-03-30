@@ -57,14 +57,14 @@ void Sdl::LTexture::free() {
     }
 }
 
-void Sdl::LTexture::render(int x, int y, SDL_Rect* clip) {
+void Sdl::LTexture::render(int x, int y, int w, int h, SDL_Rect* clip) {
     //Set rendering space and render to screen
     SDL_Rect renderQuad = {x, y, mWidth, mHeight};
 
     //Set clip rendering dimensions
     if (clip != nullptr) {
-        renderQuad.w = clip->w;
-        renderQuad.h = clip->h;
+        renderQuad.w = w;
+        renderQuad.h = h;
     }
 
     //Render to screen

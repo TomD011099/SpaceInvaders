@@ -7,6 +7,7 @@
 #include "Window/SDLWindow.h"
 #include "Entities/SDLPlayerShip.h"
 #include "Entities/SDLEnemyShip.h"
+#include "Entities/SDLPlayerBullet.h"
 #include "SDLController.h"
 #include "Window/SDLWindow.h"
 
@@ -47,6 +48,9 @@ namespace Sdl {
          * @return Controller* a pointer to an SDLController
          */
         Abs::Controller* createController();
+
+
+        Abs::PlayerBullet* createPlayerBullet(float, float);
 
         void draw();
 

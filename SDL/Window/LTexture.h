@@ -21,7 +21,7 @@ namespace Sdl {
         void free();
 
         //Renders texture at given point
-        void render( int x, int y, SDL_Rect* clip = nullptr );
+        void render(int, int, int, int, SDL_Rect*);
 
         //Gets image dimensions
         int getWidth();

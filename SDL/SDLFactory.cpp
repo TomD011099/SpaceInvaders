@@ -12,15 +12,19 @@ Sdl::SDLFactory::~SDLFactory() {
 }
 
 Abs::PlayerShip* Sdl::SDLFactory::createPlayerShip() {
-    return new Sdl::SDLPlayerShip(window, 0.5, 0.9, 73/1000, 52/1000);
+    return new Sdl::SDLPlayerShip(window, 0.5, 0.9, 0.05, 0.05);
 }
 
 Abs::EnemyShip* Sdl::SDLFactory::createEnemyShip() {
-    return new Sdl::SDLEnemyShip(window, 0.1, 0.1, 110/1000, 80/1000);
+    return new Sdl::SDLEnemyShip(window, 0.1, 0.1, 0.1, 0.1);
 }
 
 Abs::Controller* Sdl::SDLFactory::createController() {
     return new Sdl::SDLController();
+}
+
+Abs::PlayerBullet* Sdl::SDLFactory::createPlayerBullet(float x, float y) {
+    return new Sdl::SDLPlayerBullet(window, x, y, 0.01, 0.03);
 }
 
 void Sdl::SDLFactory::draw() {

@@ -7,10 +7,10 @@ Abs::Entity::Entity(float x, float y, float w, float h) {
     height = h;
 }
 
-int Abs::Entity::getXPos() {
+float Abs::Entity::getXPos() {
     return xPos;
 }
 
-int Abs::Entity::getYPos() {
+float Abs::Entity::getYPos() {
     return yPos;
 }

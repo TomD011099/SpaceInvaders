@@ -10,11 +10,11 @@ namespace Abs {
 
         virtual void visualize() = 0;
 
-        virtual int getXPos();
+        virtual float getXPos();
 
-        virtual int getYPos();
+        virtual float getYPos();
 
-        virtual void update(EVENT) = 0;
+        virtual bool update(EVENT) = 0;
 
     protected:
         float xPos;

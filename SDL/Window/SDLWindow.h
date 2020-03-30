@@ -30,6 +30,7 @@ namespace Sdl {
         SDL_Texture* background;
         SDL_Rect playerSprite;
         SDL_Rect enemySprite;
+        SDL_Rect playerBulletSprite;
         //TODO add other sprites
         LTexture* spriteSheetTexture;
         LTimer* fpsTimer;            //The frames per second timer

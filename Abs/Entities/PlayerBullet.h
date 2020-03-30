@@ -6,6 +6,8 @@
 namespace Abs{
     class PlayerBullet: public PlayerEntity {
     public:
+        PlayerBullet(float, float, float, float);
+
         virtual void visualize() = 0;
     };
 }

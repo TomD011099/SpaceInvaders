@@ -7,11 +7,11 @@
 namespace Sdl {
     class SDLPlayerShip : public Abs::PlayerShip {
     public:
-        SDLPlayerShip(Sdl::SDLWindow*, float, float, int, int);
+        SDLPlayerShip(Sdl::SDLWindow*, float, float, float, float);
 
         void visualize();
 
-        void update(EVENT);
+        bool update(EVENT);
 
     private:
         SDLWindow* window;

@@ -2,12 +2,19 @@
 #define SPACEINVADERS_SDLPLAYERBULLET_H
 
 #include "../../Abs/Entities/PlayerBullet.h"
+#include "../Window/SDLWindow.h"
 
 namespace Sdl{
-    class SDLPlayerBullet: Abs::PlayerBullet{
+    class SDLPlayerBullet: public Abs::PlayerBullet{
     public:
+        SDLPlayerBullet(SDLWindow*, float, float, float, float);
+
         void visualize();
-        void draw() {};
+
+        bool update(EVENT);
+
+    private:
+        SDLWindow* window;
     };
 }
 
