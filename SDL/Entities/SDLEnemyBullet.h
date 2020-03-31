@@ -7,7 +7,6 @@ namespace Sdl{
     class SDLEnemyBullet: public Abs::EnemyBullet {
     public:
         void visualize();
-        void draw() {};
     };
 }
 

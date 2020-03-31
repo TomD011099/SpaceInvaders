@@ -11,8 +11,6 @@ namespace Sdl {
 
         void visualize();
 
-        bool update(EVENT);
-
     private:
         SDLWindow* window;
     };

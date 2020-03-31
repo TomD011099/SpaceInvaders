@@ -10,7 +10,7 @@ namespace Sdl {
     public:
         SDLController();
 
-        EVENT pollEvents();
+        std::vector<EVENT> pollEvents();
 
     private:
         SDL_Event e;

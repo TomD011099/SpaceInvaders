@@ -14,7 +14,7 @@ namespace Abs {
 
         virtual float getYPos();
 
-        virtual bool update(EVENT) = 0;
+        virtual void move(float, float);
 
     protected:
         float xPos;

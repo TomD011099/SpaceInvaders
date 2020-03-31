@@ -4,8 +4,10 @@
 
 int main(int argc, char* argv[]) {
     Abs::Factory* factory = new Sdl::SDLFactory();
-    Game* g = new Game(factory);
+    Game* g = Game::getInstance(factory);
     g->run();
+    delete g;
+    delete(factory);
 
     return 0;
 }

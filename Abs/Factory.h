@@ -9,6 +9,8 @@
 namespace Abs{
     class Factory {
     public:
+        virtual ~Factory();
+
         virtual Abs::PlayerShip* createPlayerShip() = 0;
 
         virtual Abs::EnemyShip* createEnemyShip() = 0;

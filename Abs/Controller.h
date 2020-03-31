@@ -2,11 +2,12 @@
 #define SPACEINVADERS_CONTROLLER_H
 
 #include "../GameConstants.h"
+#include <vector>
 
 namespace Abs {
     class Controller {
     public:
-        virtual EVENT pollEvents() = 0;
+        virtual std::vector<EVENT> pollEvents() = 0;
     };
 }
 

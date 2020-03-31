@@ -1,34 +1,25 @@
+#include <vector>
 #include "SDLController.h"
 
 Sdl::SDLController::SDLController() {
 
 }
 
-EVENT Sdl::SDLController::pollEvents() {
-    EVENT event = CTRL_IDLE;
+std::vector<EVENT> Sdl::SDLController::pollEvents() {
+    std::vector<EVENT> events;
 
-    if (SDL_PollEvent(&e) != 0) {
-        switch (e.type) {
-            case SDL_QUIT:
-                event = CTRL_QUIT;
-                break;
-            case SDL_KEYDOWN:
-                switch (e.key.keysym.sym) {
-                    case SDLK_LEFT:
-                        event = CTRL_LEFT;
-                        break;
-                    case SDLK_RIGHT:
-                        event = CTRL_RIGHT;
-                        break;
-                    case SDLK_SPACE:
-                        event = CTRL_SHOOT;
-                        break;
-                    case SDLK_x:
-                        event = CTRL_QUIT;
-                        break;
-                }
-        }
+    while (SDL_PollEvent(&e) != 0) {
+        if (e.type == SDL_QUIT)
+            events.push_back(CTRL_QUIT);
     }
 
-    return event;
+    const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
+    if (keyboardState[SDL_SCANCODE_SPACE])
+        events.push_back(CTRL_SHOOT);
+    if (keyboardState[SDL_SCANCODE_LEFT])
+        events.push_back(CTRL_LEFT);
+    if (keyboardState[SDL_SCANCODE_RIGHT])
+        events.push_back(CTRL_RIGHT);
+
+    return events;
 }

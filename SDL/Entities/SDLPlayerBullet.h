@@ -9,9 +9,9 @@ namespace Sdl{
     public:
         SDLPlayerBullet(SDLWindow*, float, float, float, float);
 
-        void visualize();
+        ~SDLPlayerBullet();
 
-        bool update(EVENT);
+        void visualize();
 
     private:
         SDLWindow* window;

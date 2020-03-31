@@ -1,7 +1,21 @@
 #include "Game.h"
 
+Game* Game::instance = nullptr;
+
 Game::Game(Abs::Factory* absFactory) {
     gameFactory = absFactory;
+    lives = LIVES;
+    score = 0;
+    quit = false;
+
+    playerShip = nullptr;
+    playerBullet = nullptr;
+}
+
+Game* Game::getInstance(Abs::Factory* absFactory) {
+    if (instance == nullptr)
+        instance = new Game(absFactory);
+    return instance;
 }
 
 /*
@@ -18,37 +32,61 @@ Game::Game(Abs::Factory* absFactory) {
  *
  */
 void Game::run() {
-    Abs::Controller* controller = gameFactory->createController();
-    Abs::PlayerShip* playerShip = gameFactory->createPlayerShip();
+    controller = gameFactory->createController();
+    playerShip = gameFactory->createPlayerShip();
 
     Abs::EnemyShip* enemyShip = gameFactory->createEnemyShip();
     gameEntities.push_front(enemyShip);
 
-    EVENT event = CTRL_IDLE;
-
-    while (event != CTRL_QUIT) {
-        event = controller->pollEvents();
-
+    while (!quit) {
         gameFactory->setupFrame();
 
-        playerShip->update(event);
+        playerShipHandler(&quit);
 
-        if (event == CTRL_SHOOT) {
-            Abs::PlayerBullet* playerBullet = gameFactory->createPlayerBullet(playerShip->getXPos(), playerShip->getYPos());
-            gameEntities.push_front(playerBullet);
-        }
-
-        std::list<Abs::Entity*>::iterator it = gameEntities.begin();
-        while (it != gameEntities.end()) {
-            Abs::Entity* e = *it;
-            bool res = e->update(event);
-            if (!res) {
-                gameEntities.erase(it++);
-            } else {
-                ++it;
-            }
-        }
+        playerBulletHandler();
 
         gameFactory->draw();
     }
 }
+
+void Game::playerShipHandler(bool *quit) {
+    events = controller->pollEvents();
+
+    for (EVENT event : events) {
+        switch (event) {
+            case CTRL_LEFT:
+                playerShip->move(-NORMALISED_SPEED, 0);
+                break;
+            case CTRL_RIGHT:
+                playerShip->move(NORMALISED_SPEED, 0);
+                break;
+            case CTRL_SHOOT:
+                if (playerBullet == nullptr)
+                    playerBullet = gameFactory->createPlayerBullet(playerShip->getXPos(), playerShip->getYPos());
+                break;
+            case CTRL_QUIT:
+                *quit = true;
+                break;
+            default:
+                break;
+        }
+    }
+
+    playerShip->visualize();
+}
+
+void Game::playerBulletHandler() {
+    if (playerBullet != nullptr) {
+        float y = playerBullet->getYPos();
+
+        if (y < 0) {
+            delete(playerBullet);
+        } else {
+            playerBullet->move(0, -NORMALISED_BULLET_SPEED);
+        }
+
+        playerBullet->visualize();
+    }
+}
+
+

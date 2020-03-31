@@ -7,9 +7,3 @@ Sdl::SDLEnemyShip::SDLEnemyShip(Sdl::SDLWindow* window, float x, float y, float 
 void Sdl::SDLEnemyShip::visualize() {
     window->render(xPos, yPos, width, height, ENEMYSHIP);
 }
-
-bool Sdl::SDLEnemyShip::update(EVENT e) {
-    visualize();
-    return true;
-}
-
