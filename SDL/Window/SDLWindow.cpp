@@ -6,10 +6,6 @@ Sdl::SDLWindow::SDLWindow() {
     spriteSheetTexture = nullptr;
 
     countedFrames = 0;
-    fpsTimer = new LTimer;
-    capTimer = new LTimer;
-
-    fpsTimer->start();
 }
 
 Sdl::SDLWindow::~SDLWindow() {
@@ -77,16 +73,36 @@ bool Sdl::SDLWindow::loadMedia() {
         playerSprite.w = 73;
         playerSprite.h = 52;
 
-        //Set enemy sprite
-        enemySprite.x = 19;
-        enemySprite.y = 14;
-        enemySprite.w = 110;
-        enemySprite.h = 80;
+        //Set enemy sprites
+        enemySprites[0].x = 19;
+        enemySprites[0].y = 14;
+        enemySprites[0].w = 110;
+        enemySprites[0].h = 80;
 
-        playerBulletSprite.x = 533;
-        playerBulletSprite.y = 394;
-        playerBulletSprite.w = 9;
-        playerBulletSprite.h = 51;
+        enemySprites[1].x = 165;
+        enemySprites[1].y = 14;
+        enemySprites[1].w = 110;
+        enemySprites[1].h = 80;
+
+        enemySprites[2].x = 312;
+        enemySprites[2].y = 14;
+        enemySprites[2].w = 80;
+        enemySprites[2].h = 80;
+
+        enemySprites[3].x = 145;
+        enemySprites[3].y = 374;
+        enemySprites[3].w = 100;
+        enemySprites[3].h = 80;
+
+        enemySprites[4].x = 377;
+        enemySprites[4].y = 374;
+        enemySprites[4].w = 80;
+        enemySprites[4].h = 80;
+
+        bulletSprite.x = 533;
+        bulletSprite.y = 394;
+        bulletSprite.w = 9;
+        bulletSprite.h = 51;
     }
 
     SDL_Surface* loadedSurface = IMG_Load("../Media/background.jpeg");
@@ -123,46 +139,46 @@ void Sdl::SDLWindow::render(float x, float y, float w, float h, ENTITY type) {
 
     SDLw = w * DEFAULT_SCREEN_WIDTH;
     SDLh = h * DEFAULT_SCREEN_HEIGHT;
-    SDLx = x * (DEFAULT_SCREEN_WIDTH - SDLw);
-    SDLy = y * (DEFAULT_SCREEN_HEIGHT - SDLh);
+    SDLx = (x * DEFAULT_SCREEN_WIDTH) - SDLw/2;
+    SDLy = (y * DEFAULT_SCREEN_HEIGHT) - SDLh/2;
 
     switch (type) {
         case PLAYERSHIP:
             spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &playerSprite);
             break;
-        case ENEMYSHIP:
-            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &enemySprite);
+        case ENEMYSHIP0:
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &enemySprites[0]);
+            break;
+        case ENEMYSHIP1:
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &enemySprites[1]);
+            break;
+        case ENEMYSHIP2:
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &enemySprites[2]);
+            break;
+        case ENEMYSHIP3:
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &enemySprites[3]);
+            break;
+        case ENEMYSHIP4:
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &enemySprites[4]);
             break;
         case PLAYERBULLET:
-            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &playerBulletSprite);
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &bulletSprite);
+            break;
+        case ENEMYBULLET:
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &bulletSprite);
+            break;
         default:
             break;
     }
 }
 
 void Sdl::SDLWindow::draw() {
-    capTimer->start();
-
-    //Calculate and correct fps
-    float avgFPS = static_cast<float> (countedFrames) / (fpsTimer->getTicks() / 1000.f);
-    if (avgFPS > 2000000) {
-        avgFPS = 0;
-    }
-
     //Update screen
     SDL_RenderPresent(renderer);
-    ++countedFrames;
-
-    int frameTicks = capTimer->getTicks();
-    if (frameTicks < SCREEN_TICK_PER_FRAME) {
-        //Wait remaining time
-        SDL_Delay(SCREEN_TICK_PER_FRAME - frameTicks);
-    }
-
-    //Clear renderer
-    SDL_RenderClear(renderer);
 }
 
 void Sdl::SDLWindow::setup() {
+    //Clear renderer
+    SDL_RenderClear(renderer);
     SDL_RenderCopy(renderer, background, nullptr, nullptr);
 }

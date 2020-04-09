@@ -17,14 +17,14 @@ float Abs::Entity::getYPos() {
 }
 
 void Abs::Entity::move(float dx, float dy) {
-    std::cout << xPos << "\t" << dx  << "\t" << width << "\n";
-
-    if ((xPos + dx) < 0)
-        xPos = 0;
-    else if (xPos + dx > 1)
-        xPos = 1;
+    if ((xPos + dx) < (width/2))
+        xPos = (width/2);
+    else if (xPos + dx + (width/2) > 1)
+        xPos = 1 - (width/2);
     else
         xPos += dx;
 
     yPos += dy;
 }
+
+

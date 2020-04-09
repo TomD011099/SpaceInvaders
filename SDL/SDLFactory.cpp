@@ -11,20 +11,20 @@ Sdl::SDLFactory::~SDLFactory() {
     delete window;
 }
 
-Abs::PlayerShip* Sdl::SDLFactory::createPlayerShip() {
-    return new Sdl::SDLPlayerShip(window, 0.5, 0.9, 0.05, 0.05);
+Abs::PlayerShip* Sdl::SDLFactory::createPlayerShip(float x, float y, float w, float h) {
+    return new Sdl::SDLPlayerShip(window, x, y, w, h);
 }
 
-Abs::EnemyShip* Sdl::SDLFactory::createEnemyShip() {
-    return new Sdl::SDLEnemyShip(window, 0.1, 0.1, 0.1, 0.1);
+Abs::EnemyShip* Sdl::SDLFactory::createEnemyShip(float x, float y, float w, float h, ENTITY e) {
+    return new Sdl::SDLEnemyShip(window, x, y, w, h, e);
 }
 
 Abs::Controller* Sdl::SDLFactory::createController() {
     return new Sdl::SDLController();
 }
 
-Abs::PlayerBullet* Sdl::SDLFactory::createPlayerBullet(float x, float y) {
-    return new Sdl::SDLPlayerBullet(window, x, y, 0.01, 0.03);
+Abs::PlayerBullet* Sdl::SDLFactory::createPlayerBullet(float x, float y, float w, float h) {
+    return new Sdl::SDLPlayerBullet(window, x, y, w, h);
 }
 
 void Sdl::SDLFactory::draw() {
@@ -33,4 +33,8 @@ void Sdl::SDLFactory::draw() {
 
 void Sdl::SDLFactory::setupFrame() {
     window->setup();
+}
+
+Abs::EnemyBullet* Sdl::SDLFactory::createEnemyBullet(float x, float y, float w, float h) {
+    return new Sdl::SDLEnemyBullet(window, x, y, w, h);
 }

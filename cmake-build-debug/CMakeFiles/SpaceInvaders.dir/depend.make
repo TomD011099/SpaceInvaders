@@ -61,6 +61,7 @@ CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.obj: ../Abs/Entities/PosB
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj: ../Abs/Controller.h
+CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj: ../Abs/Entities/EnemyBullet.h
 CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj: ../Abs/Entities/EnemyEntity.h
 CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj: ../Abs/Entities/EnemyShip.h
 CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj: ../Abs/Entities/Entity.h
@@ -72,6 +73,7 @@ CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj: ../Abs/Factory.h
 CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj: ../GameConstants.h
 
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Abs/Controller.h
+CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Abs/Entities/EnemyBullet.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Abs/Entities/EnemyEntity.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Abs/Entities/EnemyShip.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Abs/Entities/Entity.h
@@ -83,12 +85,60 @@ CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Game.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../GameConstants.h
 
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_assert.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_atomic.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_audio.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_blendmode.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_clipboard.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_config.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_cpuinfo.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_endian.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_error.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_events.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_filesystem.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_gamecontroller.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_gesture.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_haptic.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_hints.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_image.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_joystick.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_keyboard.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_keycode.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_loadso.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_log.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_main.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_messagebox.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_mouse.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_mutex.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_pixels.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_platform.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_power.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_quit.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_rect.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_render.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_rwops.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_scancode.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_sensor.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_shape.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_stdinc.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_surface.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_system.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_thread.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_timer.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_touch.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_version.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../Abs/Entities/EnemyBullet.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../Abs/Entities/EnemyEntity.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../Abs/Entities/Entity.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../GameConstants.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../SDL/Entities/SDLEnemyBullet.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../SDL/Entities/SDLEnemyBullet.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../SDL/Window/LTexture.h
+CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj: ../SDL/Window/SDLWindow.h
 
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_assert.h
@@ -143,7 +193,6 @@ CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj: ../GameConstants
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj: ../SDL/Entities/SDLEnemyShip.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj: ../SDL/Entities/SDLEnemyShip.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj: ../SDL/Window/LTexture.h
-CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj: ../SDL/Window/LTimer.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj: ../SDL/Window/SDLWindow.h
 
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.obj: ../Abs/Entities/BonusEntity.h
@@ -206,7 +255,6 @@ CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../GameConsta
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../SDL/Entities/SDLPlayerBullet.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../SDL/Entities/SDLPlayerBullet.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../SDL/Window/LTexture.h
-CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../SDL/Window/LTimer.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerBullet.cpp.obj: ../SDL/Window/SDLWindow.h
 
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerShip.cpp.obj: C:/MinGW/include/SDL2/SDL.h
@@ -262,7 +310,6 @@ CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerShip.cpp.obj: ../GameConstant
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerShip.cpp.obj: ../SDL/Entities/SDLPlayerShip.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerShip.cpp.obj: ../SDL/Entities/SDLPlayerShip.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerShip.cpp.obj: ../SDL/Window/LTexture.h
-CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerShip.cpp.obj: ../SDL/Window/LTimer.h
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerShip.cpp.obj: ../SDL/Window/SDLWindow.h
 
 CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.obj: ../Abs/Entities/BonusEntity.h
@@ -324,6 +371,7 @@ CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_v
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../Abs/Controller.h
+CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../Abs/Entities/EnemyBullet.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../Abs/Entities/EnemyEntity.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../Abs/Entities/EnemyShip.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../Abs/Entities/Entity.h
@@ -332,6 +380,7 @@ CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../Abs/Entities/PlayerEntit
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../Abs/Entities/PlayerShip.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../Abs/Factory.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../GameConstants.h
+CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/Entities/SDLEnemyBullet.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/Entities/SDLEnemyShip.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/Entities/SDLPlayerBullet.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/Entities/SDLPlayerShip.h
@@ -339,7 +388,6 @@ CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/SDLController.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/SDLFactory.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/SDLFactory.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/Window/LTexture.h
-CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/Window/LTimer.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj: ../SDL/Window/SDLWindow.h
 
 CMakeFiles/SpaceInvaders.dir/SDL/Window/LTexture.cpp.obj: C:/MinGW/include/SDL2/SDL.h
@@ -391,55 +439,6 @@ CMakeFiles/SpaceInvaders.dir/SDL/Window/LTexture.cpp.obj: C:/MinGW/include/SDL2/
 CMakeFiles/SpaceInvaders.dir/SDL/Window/LTexture.cpp.obj: ../SDL/Window/LTexture.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Window/LTexture.cpp.obj: ../SDL/Window/LTexture.h
 
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_assert.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_atomic.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_audio.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_blendmode.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_clipboard.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_config.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_cpuinfo.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_endian.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_error.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_events.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_filesystem.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_gamecontroller.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_gesture.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_haptic.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_hints.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_image.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_joystick.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_keyboard.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_keycode.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_loadso.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_log.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_main.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_messagebox.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_mouse.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_mutex.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_pixels.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_platform.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_power.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_quit.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_rect.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_render.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_rwops.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_scancode.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_sensor.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_shape.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_stdinc.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_surface.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_system.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_thread.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_timer.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_touch.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_version.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: C:/MinGW/include/SDL2/close_code.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: ../SDL/Window/LTimer.cpp
-CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj: ../SDL/Window/LTimer.h
-
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: C:/MinGW/include/SDL2/SDL.h
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: C:/MinGW/include/SDL2/SDL_assert.h
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: C:/MinGW/include/SDL2/SDL_atomic.h
@@ -488,7 +487,6 @@ CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: C:/MinGW/include/SDL2
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: ../GameConstants.h
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: ../SDL/Window/LTexture.h
-CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: ../SDL/Window/LTimer.h
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: ../SDL/Window/SDLWindow.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: ../SDL/Window/SDLWindow.h
 
@@ -539,6 +537,7 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Controller.h
+CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Entities/EnemyBullet.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Entities/EnemyEntity.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Entities/EnemyShip.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Entities/Entity.h
@@ -548,13 +547,13 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Entities/PlayerShip.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Factory.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Game.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../GameConstants.h
+CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Entities/SDLEnemyBullet.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Entities/SDLEnemyShip.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Entities/SDLPlayerBullet.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Entities/SDLPlayerShip.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/SDLController.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/SDLFactory.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Window/LTexture.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Window/LTimer.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Window/SDLWindow.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../main.cpp
 

@@ -3,7 +3,6 @@
 
 #include "LTexture.h"
 #include "../../GameConstants.h"
-#include "LTimer.h"
 
 namespace Sdl {
     class SDLWindow {
@@ -29,12 +28,10 @@ namespace Sdl {
         SDL_Renderer* renderer;     //The use of a renderer means we can use the GPU for our display
         SDL_Texture* background;
         SDL_Rect playerSprite;
-        SDL_Rect enemySprite;
-        SDL_Rect playerBulletSprite;
+        SDL_Rect enemySprites[5];
+        SDL_Rect bulletSprite;
         //TODO add other sprites
         LTexture* spriteSheetTexture;
-        LTimer* fpsTimer;            //The frames per second timer
-        LTimer* capTimer;            //The frames per second cap timer
         int countedFrames;
     };
 }

@@ -4,8 +4,6 @@ Sdl::SDLPlayerBullet::SDLPlayerBullet(Sdl::SDLWindow* window, float x, float y, 
     this->window = window;
 }
 
-Sdl::SDLPlayerBullet::~SDLPlayerBullet() = default;
-
 void Sdl::SDLPlayerBullet::visualize() {
     window->render(xPos, yPos, width, height, PLAYERBULLET);
 }

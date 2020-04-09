@@ -7,7 +7,7 @@
 namespace Sdl {
     class SDLEnemyShip : public Abs::EnemyShip {
     public:
-        SDLEnemyShip(Sdl::SDLWindow*, float, float, float , float);
+        SDLEnemyShip(Sdl::SDLWindow*, float, float, float , float, ENTITY);
 
         void visualize();
 

@@ -21,7 +21,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/SpaceInvaders.dir/SDL/SDLController.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/SDL/Window/LTexture.cpp.obj"
-  "CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/main.cpp.obj"
   "SpaceInvaders.exe"

@@ -9,7 +9,7 @@ namespace Sdl{
     public:
         SDLPlayerBullet(SDLWindow*, float, float, float, float);
 
-        ~SDLPlayerBullet();
+        ~SDLPlayerBullet() = default;
 
         void visualize();
 

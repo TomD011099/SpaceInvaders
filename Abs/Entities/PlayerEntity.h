@@ -8,6 +8,8 @@ namespace Abs{
     public:
         PlayerEntity(float, float, float, float);
 
+        virtual ~PlayerEntity() = default;
+
         virtual void visualize() = 0;
     };
 }

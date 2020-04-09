@@ -8,6 +8,7 @@
 #include "Entities/SDLPlayerShip.h"
 #include "Entities/SDLEnemyShip.h"
 #include "Entities/SDLPlayerBullet.h"
+#include "Entities/SDLEnemyBullet.h"
 #include "SDLController.h"
 #include "Window/SDLWindow.h"
 
@@ -33,14 +34,14 @@ namespace Sdl {
          *
          * @return Playership* a pointer to an SDLPlayership
          */
-        Abs::PlayerShip* createPlayerShip();
+        Abs::PlayerShip* createPlayerShip(float, float, float, float);
 
         /**
          * Creates a new enemy
          *
          * @return EnemyShip* a pointer to an SDLEnemyShip
          */
-        Abs::EnemyShip* createEnemyShip();
+        Abs::EnemyShip* createEnemyShip(float, float, float, float, ENTITY);
 
         /**
          * Creates a controller, which will check player input
@@ -50,7 +51,9 @@ namespace Sdl {
         Abs::Controller* createController();
 
 
-        Abs::PlayerBullet* createPlayerBullet(float, float);
+        Abs::PlayerBullet* createPlayerBullet(float, float, float, float);
+
+        Abs::EnemyBullet* createEnemyBullet(float, float, float, float);
 
         void draw();
 

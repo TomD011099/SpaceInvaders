@@ -10,6 +10,8 @@ namespace Abs {
 
         virtual void visualize() = 0;
 
+        virtual ~Entity() = default;
+
         virtual float getXPos();
 
         virtual float getYPos();
@@ -17,8 +19,8 @@ namespace Abs {
         virtual void move(float, float);
 
     protected:
-        float xPos;
-        float yPos;
+        float xPos;     //Position of center
+        float yPos;     //Position of center
         float width;
         float height;
     };

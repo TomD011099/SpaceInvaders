@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
     Game* g = Game::getInstance(factory);
     g->run();
     delete g;
-    delete(factory);
+    delete factory;
 
     return 0;
 }

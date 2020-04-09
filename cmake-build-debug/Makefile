@@ -716,33 +716,6 @@ SDL/Window/LTexture.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Window/LTexture.cpp.s
 .PHONY : SDL/Window/LTexture.cpp.s
 
-SDL/Window/LTimer.obj: SDL/Window/LTimer.cpp.obj
-
-.PHONY : SDL/Window/LTimer.obj
-
-# target to build an object file
-SDL/Window/LTimer.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.obj
-.PHONY : SDL/Window/LTimer.cpp.obj
-
-SDL/Window/LTimer.i: SDL/Window/LTimer.cpp.i
-
-.PHONY : SDL/Window/LTimer.i
-
-# target to preprocess a source file
-SDL/Window/LTimer.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.i
-.PHONY : SDL/Window/LTimer.cpp.i
-
-SDL/Window/LTimer.s: SDL/Window/LTimer.cpp.s
-
-.PHONY : SDL/Window/LTimer.s
-
-# target to generate assembly for a file
-SDL/Window/LTimer.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Window/LTimer.cpp.s
-.PHONY : SDL/Window/LTimer.cpp.s
-
 SDL/Window/SDLWindow.obj: SDL/Window/SDLWindow.cpp.obj
 
 .PHONY : SDL/Window/SDLWindow.obj
@@ -872,9 +845,6 @@ help:
 	@echo ... SDL/Window/LTexture.obj
 	@echo ... SDL/Window/LTexture.i
 	@echo ... SDL/Window/LTexture.s
-	@echo ... SDL/Window/LTimer.obj
-	@echo ... SDL/Window/LTimer.i
-	@echo ... SDL/Window/LTimer.s
 	@echo ... SDL/Window/SDLWindow.obj
 	@echo ... SDL/Window/SDLWindow.i
 	@echo ... SDL/Window/SDLWindow.s

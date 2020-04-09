@@ -8,6 +8,8 @@ namespace Abs{
     public:
         PlayerBullet(float, float, float, float);
 
+        virtual ~PlayerBullet() = default;
+
         virtual void visualize() = 0;
     };
 }
