@@ -25,9 +25,9 @@ private:
     static Game* instance;
 
     Abs::Factory* gameFactory;                  //The factory that will create all specific items
-    int lives, score, cooldownCounter;
+    int lives, score, enemyShootCooldownCounter, enemyMoveCooldownCounter;
     std::vector<EVENT> events;
-    bool quit;
+    bool isQuit, isEnemyMovingLeft, isEnemyMovingHorizontal;
 
     Abs::PlayerShip* playerShip;
     Abs::Controller* controller;
@@ -46,6 +46,8 @@ private:
     void enemyShipHandler();
 
     void enemyBulletHandler();
+
+    bool isCollision(Abs::Entity*, Abs::Entity*);
 };
 
 

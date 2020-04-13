@@ -1,8 +1,9 @@
 #include "EnemyShip.h"
 
-Abs::EnemyShip::EnemyShip(float x, float y, float w, float h, ENTITY e) : EnemyEntity(x, y, w, h){
+Abs::EnemyShip::EnemyShip(float x, float y, float w, float h, ENTITY e) : EnemyEntity(x, y, w, h) {
     type = e;
     alive = true;
+    gone = false;
 }
 
 bool Abs::EnemyShip::isAlive() {
@@ -11,4 +12,16 @@ bool Abs::EnemyShip::isAlive() {
 
 void Abs::EnemyShip::hit() {
     alive = false;
+    type = WRECK;
+    deathTime = 0;
 }
+
+bool Abs::EnemyShip::isGone() {
+    return gone;
+}
+
+void Abs::EnemyShip::tick() {
+    deathTime++;
+    gone = (deathTime == NORMALISED_ENEMY_DEATH_TIME);
+}
+

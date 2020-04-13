@@ -18,6 +18,10 @@ namespace Abs {
 
         virtual void move(float, float);
 
+        float getWidth() const;
+
+        float getHeight() const;
+
     protected:
         float xPos;     //Position of center
         float yPos;     //Position of center

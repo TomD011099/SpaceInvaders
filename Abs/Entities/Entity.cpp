@@ -16,6 +16,14 @@ float Abs::Entity::getYPos() {
     return yPos;
 }
 
+float Abs::Entity::getWidth() const {
+    return width;
+}
+
+float Abs::Entity::getHeight() const {
+    return height;
+}
+
 void Abs::Entity::move(float dx, float dy) {
     if ((xPos + dx) < (width/2))
         xPos = (width/2);

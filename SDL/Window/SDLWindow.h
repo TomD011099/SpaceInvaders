@@ -30,6 +30,7 @@ namespace Sdl {
         SDL_Rect playerSprite;
         SDL_Rect enemySprites[5];
         SDL_Rect bulletSprite;
+        SDL_Rect wreckSprite;
         //TODO add other sprites
         LTexture* spriteSheetTexture;
         int countedFrames;

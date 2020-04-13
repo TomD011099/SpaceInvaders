@@ -7,12 +7,17 @@ Game::Game(Abs::Factory* absFactory) {
     gameFactory = absFactory;
     lives = MAX_LIVES;
     score = 0;
-    quit = false;
-    cooldownCounter = 0;
+    isQuit = false;
+    isEnemyMovingLeft = true;
+    isEnemyMovingHorizontal = true;
+    enemyShootCooldownCounter = 0;
+    enemyMoveCooldownCounter = 0;
 
     playerShip = nullptr;
     playerBullet = nullptr;
     controller = nullptr;
+
+    srand(time(nullptr));
 }
 
 Game* Game::getInstance(Abs::Factory* absFactory) {
@@ -36,12 +41,12 @@ Game* Game::getInstance(Abs::Factory* absFactory) {
 void Game::run() {
     setup();
 
-    while (!quit) {
+    while (!isQuit && !enemies.empty()) {
         std::chrono::time_point start = std::chrono::system_clock::now();
 
         gameFactory->setupFrame();
 
-        playerShipHandler(&quit);
+        playerShipHandler(&isQuit);
 
         playerBulletHandler();
 
@@ -129,40 +134,112 @@ void Game::playerShipHandler(bool* quit_psh) {
 
 void Game::playerBulletHandler() {
     if (playerBullet != nullptr) {
-        float y = playerBullet->getYPos();
-
-        if (y < 0) {
+        if (playerBullet->getYPos() < 0) {
             delete playerBullet;
             playerBullet = nullptr;
+            return;
         } else {
             playerBullet->move(0, -NORMALISED_BULLET_SPEED);
-            playerBullet->visualize();
         }
+        bool hit = false;
+        for (int i = 0; (i < enemies.size() && !hit); i++) {
+            for (int j = 0; (j < enemies[i].size() && !hit); j++) {
+                Abs::EnemyShip* enemyShip = enemies[i].at(j);
+                if (isCollision(playerBullet, enemyShip) && enemyShip->isAlive()) {
+                    enemyShip->hit();
+                    delete playerBullet;
+                    playerBullet = nullptr;
+                    hit = true;
+                }
+            }
+        }
+        if (!hit)
+            playerBullet->visualize();
     }
 }
 
 void Game::enemyShipHandler() {
+    for (int i = 0; i < enemies.size(); i++) {
+        bool isColumnAlive = false;
+        for (int j = 0; j < enemies[i].size(); j++) {
+            Abs::EnemyShip* enemyShip = enemies[i].at(j);
+            if (enemyShip->isAlive()) {
+                isColumnAlive = true;
+            } else {
+                enemyShip->tick();
+                if (enemyShip->isGone()) {
+                    delete enemyShip;
+                    enemies[i].erase(enemies[i].begin() + (j--));
+                    std::cout << "Enemy erased\n";
+                } else {
+                    isColumnAlive = true;
+                }
+            }
+        }
+
+        if (!isColumnAlive) {
+            enemies.erase(enemies.begin() + (i--));
+        }
+    }
+
+    if (enemyMoveCooldownCounter == NORMALIZED_ENEMY_MOVEMENT_DELAY) {
+        enemyMoveCooldownCounter = 0;
+
+        float minX = enemies[0][0]->getXPos();
+        float maxX = enemies[enemies.size() - 1][0]->getXPos();
+        float movement = 0;
+
+        if (isEnemyMovingLeft) {
+            if (minX - ENEMY_SPEED <= ENEMYSHIP_WIDHT / 2 && isEnemyMovingHorizontal) {
+                isEnemyMovingHorizontal = false;
+                isEnemyMovingLeft = false;
+            } else {
+                movement = -ENEMY_SPEED;
+            }
+        } else {
+            if (maxX + ENEMY_SPEED >= (1 - ENEMYSHIP_WIDHT / 2) && isEnemyMovingHorizontal) {
+                isEnemyMovingHorizontal = false;
+                isEnemyMovingLeft = true;
+            } else {
+                movement = ENEMY_SPEED;
+            }
+        }
+
+        for (std::vector<Abs::EnemyShip*> column : enemies) {
+            for (Abs::EnemyShip* enemyShip : column) {
+                if (isEnemyMovingHorizontal) {
+                    enemyShip->move(movement, 0);
+                } else {
+                    enemyShip->move(0, ENEMY_SPEED);
+                }
+            }
+        }
+
+        isEnemyMovingHorizontal = true;
+    } else {
+        enemyMoveCooldownCounter++;
+    }
+
     for (std::vector<Abs::EnemyShip*> column : enemies) {
         for (Abs::EnemyShip* enemyShip : column) {
-            if (enemyShip->isAlive())
+            if (enemyShip->isAlive() || !enemyShip->isGone())
                 enemyShip->visualize();
         }
     }
 
-    if (cooldownCounter == NORMALIZED_ENEMY_COOLDOWN) {
-        cooldownCounter = 0;
+    if (enemyShootCooldownCounter == NORMALIZED_ENEMY_COOLDOWN) {
+        enemyShootCooldownCounter = 0;
         int shootingColumn = rand() % 11;
         for (auto it = enemies[shootingColumn].rbegin(); it != enemies[shootingColumn].rend(); ++it) {
             Abs::EnemyShip* ship = *it;
             if (ship->isAlive()) {
                 enemyBullets.push_back(
                         gameFactory->createEnemyBullet(ship->getXPos(), ship->getYPos(), BULLET_WIDTH, BULLET_HEIGHT));
-                std::cout << enemyBullets.size() << "\n";
                 break;
             }
         }
     } else {
-        cooldownCounter++;
+        enemyShootCooldownCounter++;
     }
 }
 
@@ -179,6 +256,43 @@ void Game::enemyBulletHandler() {
             bullet->visualize();
         }
     }
+}
+
+bool Game::isCollision(Abs::Entity* e1, Abs::Entity* e2) {
+    //The sides of the rectangles
+    float left1 = 0, left2 = 0, right1 = 0, right2 = 0, top1 = 0, top2 = 0, bottom1 = 0, bottom2 = 0;
+
+    //Calculate the sides of rect 1
+    left1 = e1->getXPos() - (e1->getWidth() / 2);
+    right1 = e1->getXPos() + (e1->getWidth() / 2);
+    top1 = e1->getYPos() - (e1->getHeight() / 2);
+    bottom1 = e1->getYPos() + (e1->getHeight() / 2);
+
+    //Calculate the sides of rect 2
+    left2 = e2->getXPos() - (e2->getWidth() / 2);
+    right2 = e2->getXPos() + (e2->getWidth() / 2);
+    top2 = e2->getYPos() - (e2->getHeight() / 2);
+    bottom2 = e2->getYPos() + (e2->getHeight() / 2);
+
+    //If any of the sides from A are outside of B
+    if (bottom1 <= top2) {
+        return false;
+    }
+
+    if (top1 >= bottom2) {
+        return false;
+    }
+
+    if (right1 <= left2) {
+        return false;
+    }
+
+    if (left1 >= right2) {
+        return false;
+    }
+
+    //If none of the sides from A are outside B
+    return true;
 }
 
 

@@ -103,6 +103,11 @@ bool Sdl::SDLWindow::loadMedia() {
         bulletSprite.y = 394;
         bulletSprite.w = 9;
         bulletSprite.h = 51;
+
+        wreckSprite.x = 359;
+        wreckSprite.y = 632;
+        wreckSprite.w = 96;
+        wreckSprite.h = 58;
     }
 
     SDL_Surface* loadedSurface = IMG_Load("../Media/background.jpeg");
@@ -161,9 +166,10 @@ void Sdl::SDLWindow::render(float x, float y, float w, float h, ENTITY type) {
         case ENEMYSHIP4:
             spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &enemySprites[4]);
             break;
-        case PLAYERBULLET:
-            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &bulletSprite);
+        case WRECK:
+            spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &wreckSprite);
             break;
+        case PLAYERBULLET:
         case ENEMYBULLET:
             spriteSheetTexture->render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw), static_cast<int>(SDLh), &bulletSprite);
             break;

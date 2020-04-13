@@ -3,8 +3,8 @@
 
 #include "EnemyEntity.h"
 
-namespace Abs{
-    class EnemyShip: public EnemyEntity {
+namespace Abs {
+    class EnemyShip : public EnemyEntity {
     public:
         EnemyShip(float, float, float, float, ENTITY);
 
@@ -12,9 +12,14 @@ namespace Abs{
 
         void hit();
 
+        bool isGone();
+
+        void tick();
+
     protected:
         ENTITY type;
-        bool alive;
+        bool alive, gone;
+        int deathTime;
     };
 }
 
