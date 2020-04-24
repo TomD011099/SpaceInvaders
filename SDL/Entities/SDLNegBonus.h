@@ -7,7 +7,7 @@
 namespace Sdl {
     class SDLNegBonus : public Abs::NegBonus {
     public:
-        SDLNegBonus(SDLWindow*, float, float, float, float);
+        SDLNegBonus(SDLWindow*, double, double, double, double);
 
         void visualize();
 

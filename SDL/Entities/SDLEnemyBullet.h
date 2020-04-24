@@ -7,7 +7,7 @@
 namespace Sdl{
     class SDLEnemyBullet: public Abs::EnemyBullet {
     public:
-        SDLEnemyBullet(SDLWindow*, float, float, float, float);
+        SDLEnemyBullet(SDLWindow*, double, double, double, double);
 
         ~SDLEnemyBullet() = default;
 

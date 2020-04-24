@@ -1,5 +1,5 @@
 #include "NegBonus.h"
 
-Abs::NegBonus::NegBonus(float x, float y, float w, float h) : BonusEntity(NEGBONUS, x, y, w, h){
+Abs::NegBonus::NegBonus(double x, double y, double w, double h) : BonusEntity(NEGBONUS, x, y, w, h){
 
 }

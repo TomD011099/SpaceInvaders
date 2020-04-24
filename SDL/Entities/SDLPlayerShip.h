@@ -7,7 +7,7 @@
 namespace Sdl {
     class SDLPlayerShip : public Abs::PlayerShip {
     public:
-        SDLPlayerShip(Sdl::SDLWindow*, float, float, float, float);
+        SDLPlayerShip(Sdl::SDLWindow*, double, double, double, double);
 
         void visualize();
 

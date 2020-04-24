@@ -26,7 +26,7 @@ private:
     Abs::Factory* gameFactory;
     int lives, score, enemyShootCooldownCounter, enemyMoveCooldownCounter, bonusSpawnCooldownCounter;
     std::vector<EVENT> events;
-    bool isQuit, isEnemyMovingLeft, isEnemyMovingHorizontal, isGameOver, hasSoundPlayed;
+    bool isQuit, isEnemyMovingLeft, isEnemyMovingHorizontal, isGameOver, hasSoundPlayed, showEndScore;
 
     Abs::PlayerShip* playerShip;
     Abs::Controller* controller;
@@ -53,7 +53,7 @@ private:
 
     bool isCollision(Abs::Entity*, Abs::Entity*);
 
-    static int getScore(ENTITY);
+    int getScore(ENTITY);
 };
 
 #endif

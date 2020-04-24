@@ -1,6 +1,6 @@
 #include "SDLPosBonus.h"
 
-Sdl::SDLPosBonus::SDLPosBonus(Sdl::SDLWindow* window, float x, float y, float w, float h) : Abs::PosBonus(x, y, w, h){
+Sdl::SDLPosBonus::SDLPosBonus(Sdl::SDLWindow* window, double x, double y, double w, double h) : Abs::PosBonus(x, y, w, h){
     this->window = window;
 }
 

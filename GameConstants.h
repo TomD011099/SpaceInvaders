@@ -7,33 +7,33 @@ const int SCREEN_WIDTH = 1000;
 const int SCREEN_HEIGHT = 700;
 const int SCREEN_FPS = 60;
 
-const int MAX_LIVES = 100;
+const int MAX_LIVES = 3;
 
-const float PLAYER_SPEED = 0.5; //Relative distance per second
-const float BULLET_SPEED = 0.8;
-const float ENEMY_SPEED = 0.04;
-const float BONUS_SPEED = 0.005;
+const double PLAYER_SPEED = 0.5; //Relative distance per second
+const double BULLET_SPEED = 0.8;
+const double ENEMY_SPEED = 0.04;
+const double BONUS_SPEED = 0.005;
 
-const float PLAYERSHIP_WIDTH = 0.05;
-const float PLAYERSHIP_HEIGHT = 0.05;
+const double PLAYERSHIP_WIDTH = 0.05;
+const double PLAYERSHIP_HEIGHT = 0.05;
 
-const float ENEMYSHIP_WIDHT = 0.05;
-const float ENEMYSHIP_HEIGHT = 0.04;
+const double ENEMYSHIP_WIDHT = 0.05;
+const double ENEMYSHIP_HEIGHT = 0.04;
 
-const float BULLET_WIDTH = 0.005;
-const float BULLET_HEIGHT = 0.03;
+const double BULLET_WIDTH = 0.005;
+const double BULLET_HEIGHT = 0.03;
 
-const float BONUS_WIDTH = 0.1;
-const float BONUS_HEIGHT = 0.05;
+const double BONUS_WIDTH = 0.1;
+const double BONUS_HEIGHT = 0.05;
 
-const float ENEMY_COOLDOWN = 0.35; // Cooldown in seconds
-const float ENEMY_MOVEMENT_DELAY = 1; // In seconds
-const float ENEMY_DEATH_TIME = 0.5;
+const double ENEMY_COOLDOWN = 0.35; // Cooldown in seconds
+const double ENEMY_MOVEMENT_DELAY = 1; // In seconds
+const double ENEMY_DEATH_TIME = 0.5;
 
 const int BONUS_SPAWN_RATE = 5; // In %
-const float BONUS_SPAWN_COOLDOWN = 0.25; // In sec
+const double BONUS_SPAWN_COOLDOWN = 0.25; // In sec
 
-const float ENEMY_LOWER_BOUND = 0.9;
+const double ENEMY_LOWER_BOUND = 0.9;
 
 enum EVENT {
     CTRL_QUIT, CTRL_LEFT, CTRL_RIGHT, CTRL_SHOOT
@@ -58,8 +58,8 @@ enum SOUND {
     EXPLOSION, INVADER_KILLED, SHOOT, HIT, LOSS, VICTORY, BONUS_SPAWN
 };
 
-const float NORMALISED_SPEED = PLAYER_SPEED / SCREEN_FPS;
-const float NORMALISED_BULLET_SPEED = BULLET_SPEED / SCREEN_FPS;
+const double NORMALISED_SPEED = PLAYER_SPEED / SCREEN_FPS;
+const double NORMALISED_BULLET_SPEED = BULLET_SPEED / SCREEN_FPS;
 const int NORMALIZED_ENEMY_COOLDOWN = ENEMY_COOLDOWN * SCREEN_FPS;
 const int NORMALIZED_ENEMY_MOVEMENT_DELAY = ENEMY_MOVEMENT_DELAY * SCREEN_FPS;
 const int NORMALISED_ENEMY_DEATH_TIME = ENEMY_DEATH_TIME * SCREEN_FPS;

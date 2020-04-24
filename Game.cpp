@@ -10,6 +10,7 @@ Game::Game(Abs::Factory* absFactory) {
     score = 0;
     isQuit = false;
     isGameOver = false;
+    showEndScore = false;
     hasSoundPlayed = false;
     isEnemyMovingLeft = true;
     isEnemyMovingHorizontal = true;
@@ -25,6 +26,7 @@ Game::Game(Abs::Factory* absFactory) {
     srand(time(nullptr));
 }
 
+/// Destructor of game
 Game::~Game() {
 
     //TODO delete factory
@@ -58,6 +60,7 @@ Game* Game::getInstance(Abs::Factory* absFactory) {
     return instance;
 }
 
+/// Destructor for singleton
 void Game::destroyInstance() {
     delete instance;
     instance = nullptr;
@@ -76,13 +79,14 @@ void Game::run() {
 
         gameFactory->setupFrame();
 
-        if (lives <= 0 ||isGameOver) {
+        if (lives <= 0 || isGameOver) {
             if (!hasSoundPlayed) {
                 if (lives <= 0) {
                     playerShip->killed();
                 }
                 gameFactory->playSound(LOSS);
                 hasSoundPlayed = true;
+                showEndScore = true;
             }
             isQuit = controller->isQuit();
             playerShip->visualize();
@@ -92,6 +96,7 @@ void Game::run() {
                 gameFactory->playSound(VICTORY);
                 score += lives * 500;
                 hasSoundPlayed = true;
+                showEndScore = true;
             }
             isQuit = controller->isQuit();
             playerShip->visualize();
@@ -108,7 +113,7 @@ void Game::run() {
             bonusEntityHandler();
         }
 
-        gameFactory->draw(score, lives, isGameOver);
+        gameFactory->draw(score, lives, showEndScore);
 
         std::this_thread::sleep_until(start + SCREEN_TIME);
     }
@@ -123,7 +128,7 @@ void Game::setup() {
 
 /// The grid of enemies is generated
 void Game::generateEnemies() {
-    float x = ENEMYSHIP_WIDHT / 2, y;
+    double x = ENEMYSHIP_WIDHT / 2, y;
     ENTITY e = ENEMYSHIP0;
 
     for (int i = 0; i < 11; i++) {
@@ -131,7 +136,7 @@ void Game::generateEnemies() {
         y = 0.1;
 
         for (int j = 0; j < 5; j++) {
-            y += (ENEMYSHIP_HEIGHT + static_cast<float >(0.015));
+            y += (ENEMYSHIP_HEIGHT + 0.015);
 
             switch (j) {
                 case 0:
@@ -156,7 +161,7 @@ void Game::generateEnemies() {
         }
 
         enemies.push_back(column);
-        x += (ENEMYSHIP_WIDHT + static_cast<float >(0.015)); //Distance between
+        x += (ENEMYSHIP_WIDHT + 0.015); //Distance between
     }
 }
 
@@ -263,9 +268,9 @@ void Game::enemyShipHandler() {
     if (enemyMoveCooldownCounter == NORMALIZED_ENEMY_MOVEMENT_DELAY) {
         enemyMoveCooldownCounter = 0;
 
-        float minX = enemies[0][0]->getXPos();
-        float maxX = enemies[enemies.size() - 1][0]->getXPos();
-        float movement = 0;
+        double minX = enemies[0][0]->getXPos();
+        double maxX = enemies[enemies.size() - 1][0]->getXPos();
+        double movement = 0;
 
         if (isEnemyMovingLeft) {
             if (minX - ENEMY_SPEED <= ENEMYSHIP_WIDHT / 2 && isEnemyMovingHorizontal) {
@@ -283,7 +288,7 @@ void Game::enemyShipHandler() {
             }
         }
 
-        float lowestY = 0;
+        double lowestY = 0;
 
         for (const std::vector<Abs::EnemyShip*> &column : enemies) {
             for (Abs::EnemyShip* enemyShip : column) {
@@ -291,7 +296,7 @@ void Game::enemyShipHandler() {
                     enemyShip->move(movement, 0);
                 } else {
                     enemyShip->move(0, ENEMY_SPEED);
-                    float y = enemyShip->getYPos();
+                    double y = enemyShip->getYPos();
                     if (y > lowestY) {
                         lowestY = y;
                     }
@@ -357,9 +362,10 @@ void Game::enemyBulletHandler() {
 /// Moves the bonusEntity, if there is none, there is a chance one spawns
 void Game::bonusEntityHandler() {
     if (bonusEntity != nullptr) {
-        if ((bonusEntity->getXPos()) >= static_cast<float >(1 + (bonusEntity->getWidth() / 2.0))) {
+        if ((bonusEntity->getXPos()) >= (1 + (bonusEntity->getWidth() / 2.0))) {
             delete bonusEntity;
             bonusEntity = nullptr;
+            std::cout << "deleted\n";
             return;
         } else {
             bonusEntity->move(BONUS_SPEED, 0);
@@ -389,7 +395,7 @@ void Game::bonusEntityHandler() {
 /// \return True if there is collision, false if not
 bool Game::isCollision(Abs::Entity* e1, Abs::Entity* e2) {
     //The sides of the rectangles
-    float left1, left2, right1, right2, top1, top2, bottom1, bottom2;
+    double left1, left2, right1, right2, top1, top2, bottom1, bottom2;
 
     //Calculate the sides of rect 1
     left1 = e1->getXPos() - (e1->getWidth() / 2);

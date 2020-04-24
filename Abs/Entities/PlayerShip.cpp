@@ -1,6 +1,6 @@
 #include "PlayerShip.h"
 
-Abs::PlayerShip::PlayerShip(float x, float y, float w, float h) : PlayerEntity(x, y, w, h){
+Abs::PlayerShip::PlayerShip(double x, double y, double w, double h) : PlayerEntity(x, y, w, h){
     skin = PLAYERSHIP;
 }
 

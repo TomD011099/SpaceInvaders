@@ -1,6 +1,6 @@
 #include "EnemyShip.h"
 
-Abs::EnemyShip::EnemyShip(float x, float y, float w, float h, ENTITY e) : EnemyEntity(x, y, w, h) {
+Abs::EnemyShip::EnemyShip(double x, double y, double w, double h, ENTITY e) : EnemyEntity(x, y, w, h) {
     type = e;
     alive = true;
     gone = false;

@@ -6,11 +6,11 @@
 namespace Abs{
     class BonusEntity: public Entity {
     public:
-        BonusEntity(ENTITY, float, float, float, float);
+        BonusEntity(ENTITY, double, double, double, double);
 
         virtual void visualize() = 0;
 
-        void move(float, float);
+        void move(double, double);
 
         ENTITY getEntity();
 

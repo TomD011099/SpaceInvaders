@@ -242,10 +242,10 @@ void Sdl::SDLWindow::printScore(int points) {
         printf("Failed to render text texture!\n");
     }
 
-    float scoreW = 0.1 * SCREEN_WIDTH;
-    float scoreH = 0.02 * SCREEN_HEIGHT;
-    float scoreX = (0.5 * SCREEN_WIDTH) - scoreW / 2;
-    float scoreY = (0.02 * SCREEN_HEIGHT) - scoreH / 2;
+    double scoreW = 0.1 * SCREEN_WIDTH;
+    double scoreH = 0.02 * SCREEN_HEIGHT;
+    double scoreX = (0.5 * SCREEN_WIDTH) - scoreW / 2;
+    double scoreY = (0.02 * SCREEN_HEIGHT) - scoreH / 2;
 
     score.render(static_cast<int>(scoreX), static_cast<int>(scoreY), static_cast<int>(scoreW), static_cast<int>(scoreH),
                  nullptr, renderer);
@@ -257,10 +257,10 @@ void Sdl::SDLWindow::printScoreEnd(int points) {
         printf("Failed to render text texture!\n");
     }
 
-    float scoreW = 0.5 * SCREEN_WIDTH;
-    float scoreH = 0.2 * SCREEN_HEIGHT;
-    float scoreX = (0.5 * SCREEN_WIDTH) - scoreW / 2;
-    float scoreY = (0.5 * SCREEN_HEIGHT) - scoreH / 2;
+    double scoreW = 0.5 * SCREEN_WIDTH;
+    double scoreH = 0.2 * SCREEN_HEIGHT;
+    double scoreX = (0.5 * SCREEN_WIDTH) - scoreW / 2;
+    double scoreY = (0.5 * SCREEN_HEIGHT) - scoreH / 2;
 
     endScore.render(static_cast<int>(scoreX), static_cast<int>(scoreY), static_cast<int>(scoreW),
                     static_cast<int>(scoreH),
@@ -274,18 +274,18 @@ void Sdl::SDLWindow::printLives(int lifeCount) {
         printf("Failed to render text texture!\n");
     }
 
-    float livesW = 0.03 * SCREEN_WIDTH;
-    float livesH = 0.03 * SCREEN_HEIGHT;
-    float livesX = (0.93 * SCREEN_WIDTH) - livesW / 2;
-    float livesY = (0.03 * SCREEN_HEIGHT) - livesH / 2;
+    double livesW = 0.03 * SCREEN_WIDTH;
+    double livesH = 0.03 * SCREEN_HEIGHT;
+    double livesX = (0.93 * SCREEN_WIDTH) - livesW / 2;
+    double livesY = (0.03 * SCREEN_HEIGHT) - livesH / 2;
 
     lives.render(static_cast<int>(livesX), static_cast<int>(livesY), static_cast<int>(livesW), static_cast<int>(livesH),
                  nullptr, renderer);
 
-    float livesIconW = 0.03 * SCREEN_WIDTH;
-    float livesIconH = 0.03 * SCREEN_HEIGHT;
-    float livesIconX = (0.97 * SCREEN_WIDTH) - livesIconW / 2;
-    float livesIconY = (0.03 * SCREEN_HEIGHT) - livesIconH / 2;
+    double livesIconW = 0.03 * SCREEN_WIDTH;
+    double livesIconH = 0.03 * SCREEN_HEIGHT;
+    double livesIconX = (0.97 * SCREEN_WIDTH) - livesIconW / 2;
+    double livesIconY = (0.03 * SCREEN_HEIGHT) - livesIconH / 2;
     spriteSheetTexture.render(static_cast<int>(livesIconX), static_cast<int>(livesIconY), static_cast<int>(livesIconW),
                               static_cast<int>(livesIconH), &spriteMap[PLAYERSHIP], renderer);
 }
@@ -294,8 +294,8 @@ void Sdl::SDLWindow::playSound(SOUND s) {
     Mix_PlayChannel(-1, soundMap[s], 0);
 }
 
-void Sdl::SDLWindow::render(float x, float y, float w, float h, ENTITY type) {
-    float SDLx, SDLy, SDLw, SDLh;
+void Sdl::SDLWindow::render(double x, double y, double w, double h, ENTITY type) {
+    double SDLx, SDLy, SDLw, SDLh;
 
     SDLw = w * SCREEN_WIDTH;
     SDLh = h * SCREEN_HEIGHT;

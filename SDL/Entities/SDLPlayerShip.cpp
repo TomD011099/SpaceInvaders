@@ -1,6 +1,6 @@
 #include "SDLPlayerShip.h"
 
-Sdl::SDLPlayerShip::SDLPlayerShip(Sdl::SDLWindow* window, float x, float y, float w, float h) : PlayerShip(x, y, w, h){
+Sdl::SDLPlayerShip::SDLPlayerShip(Sdl::SDLWindow* window, double x, double y, double w, double h) : PlayerShip(x, y, w, h){
     this->window = window;
 }
 

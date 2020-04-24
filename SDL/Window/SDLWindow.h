@@ -26,7 +26,7 @@ namespace Sdl {
 
         void playSound(SOUND);
 
-        void render(float, float, float, float, ENTITY);
+        void render(double, double, double, double, ENTITY);
 
         void draw();
 

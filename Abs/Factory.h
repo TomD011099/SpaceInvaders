@@ -14,19 +14,19 @@ namespace Abs{
     public:
         virtual ~Factory() = default;
 
-        virtual Abs::PlayerShip* createPlayerShip(float, float, float, float) = 0;
+        virtual Abs::PlayerShip* createPlayerShip(double, double, double, double) = 0;
 
-        virtual Abs::EnemyShip* createEnemyShip(float, float, float, float, ENTITY) = 0;
+        virtual Abs::EnemyShip* createEnemyShip(double, double, double, double, ENTITY) = 0;
 
         virtual Abs::Controller* createController() = 0;
 
-        virtual Abs::PlayerBullet* createPlayerBullet(float, float, float, float) = 0;
+        virtual Abs::PlayerBullet* createPlayerBullet(double, double, double, double) = 0;
 
-        virtual Abs::EnemyBullet* createEnemyBullet(float, float, float, float) = 0;
+        virtual Abs::EnemyBullet* createEnemyBullet(double, double, double, double) = 0;
 
-        virtual Abs::PosBonus* createPosBonus(float, float, float, float) = 0;
+        virtual Abs::PosBonus* createPosBonus(double, double, double, double) = 0;
 
-        virtual Abs::NegBonus* createNegBonus(float, float, float, float) = 0;
+        virtual Abs::NegBonus* createNegBonus(double, double, double, double) = 0;
 
         virtual void draw(int, int, bool) = 0;
 

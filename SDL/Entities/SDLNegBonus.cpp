@@ -1,6 +1,6 @@
 #include "SDLNegBonus.h"
 
-Sdl::SDLNegBonus::SDLNegBonus(Sdl::SDLWindow* window, float x, float y, float w, float h) : Abs::NegBonus(x, y, w, h){
+Sdl::SDLNegBonus::SDLNegBonus(Sdl::SDLWindow* window, double x, double y, double w, double h) : Abs::NegBonus(x, y, w, h){
     this->window = window;
 }
 

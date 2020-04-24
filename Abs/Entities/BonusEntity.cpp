@@ -1,6 +1,6 @@
 #include "BonusEntity.h"
 
-Abs::BonusEntity::BonusEntity(ENTITY e, float x, float y, float w, float h) : Entity(x, y, w, h) {
+Abs::BonusEntity::BonusEntity(ENTITY e, double x, double y, double w, double h) : Entity(x, y, w, h) {
     entity = e;
 }
 
@@ -8,7 +8,7 @@ ENTITY Abs::BonusEntity::getEntity() {
     return entity;
 }
 
-void Abs::BonusEntity::move(float dx, float dy) {
+void Abs::BonusEntity::move(double dx, double dy) {
     if ((xPos + dx) < -(width/2))
         xPos = -(width/2);
     else if (xPos + dx - (width/2) > 1)

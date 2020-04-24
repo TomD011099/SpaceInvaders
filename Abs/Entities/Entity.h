@@ -6,27 +6,27 @@
 namespace Abs {
     class Entity {
     public:
-        Entity(float, float, float, float);
+        Entity(double, double, double, double);
 
         virtual void visualize() = 0;
 
         virtual ~Entity() = default;
 
-        virtual float getXPos();
+        virtual double getXPos();
 
-        virtual float getYPos();
+        virtual double getYPos();
 
-        virtual void move(float, float);
+        virtual void move(double, double);
 
-        float getWidth() const;
+        double getWidth() const;
 
-        float getHeight() const;
+        double getHeight() const;
 
     protected:
-        float xPos;     //Position of center
-        float yPos;     //Position of center
-        float width;
-        float height;
+        double xPos;     //Position of center
+        double yPos;     //Position of center
+        double width;
+        double height;
     };
 }
 

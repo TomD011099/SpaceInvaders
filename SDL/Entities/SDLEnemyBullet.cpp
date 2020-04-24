@@ -1,6 +1,6 @@
 #include "SDLEnemyBullet.h"
 
-Sdl::SDLEnemyBullet::SDLEnemyBullet(Sdl::SDLWindow* window, float x, float y, float w, float h) : Abs::EnemyBullet(x, y, w, h){
+Sdl::SDLEnemyBullet::SDLEnemyBullet(Sdl::SDLWindow* window, double x, double y, double w, double h) : Abs::EnemyBullet(x, y, w, h){
     this->window = window;
 }
 

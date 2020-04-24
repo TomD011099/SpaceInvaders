@@ -6,7 +6,7 @@
 namespace Abs{
     class PlayerEntity: public Entity {
     public:
-        PlayerEntity(float, float, float, float);
+        PlayerEntity(double, double, double, double);
 
         virtual ~PlayerEntity() = default;
 

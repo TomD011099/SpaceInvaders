@@ -1,5 +1,5 @@
 #include "PlayerBullet.h"
 
-Abs::PlayerBullet::PlayerBullet(float x, float y, float w, float h) : PlayerEntity(x, y, w, h){
+Abs::PlayerBullet::PlayerBullet(double x, double y, double w, double h) : PlayerEntity(x, y, w, h){
 
 }

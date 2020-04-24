@@ -1,5 +1,5 @@
 #include "EnemyEntity.h"
 
-Abs::EnemyEntity::EnemyEntity(float x, float y, float w, float h) : Entity(x, y, w, h) {
+Abs::EnemyEntity::EnemyEntity(double x, double y, double w, double h) : Entity(x, y, w, h) {
 
 }

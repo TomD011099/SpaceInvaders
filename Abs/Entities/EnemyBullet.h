@@ -6,7 +6,7 @@
 namespace Abs{
     class EnemyBullet: public EnemyEntity {
     public:
-        EnemyBullet(float, float, float, float);
+        EnemyBullet(double, double, double, double);
 
         virtual ~EnemyBullet() = default;
 

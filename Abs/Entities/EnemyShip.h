@@ -6,7 +6,7 @@
 namespace Abs {
     class EnemyShip : public EnemyEntity {
     public:
-        EnemyShip(float, float, float, float, ENTITY);
+        EnemyShip(double, double, double, double, ENTITY);
 
         bool isAlive();
 

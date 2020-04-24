@@ -7,7 +7,7 @@
 namespace Sdl{
     class SDLPlayerBullet: public Abs::PlayerBullet{
     public:
-        SDLPlayerBullet(SDLWindow*, float, float, float, float);
+        SDLPlayerBullet(SDLWindow*, double, double, double, double);
 
         ~SDLPlayerBullet() = default;
 
