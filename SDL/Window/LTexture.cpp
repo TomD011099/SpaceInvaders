@@ -1,8 +1,7 @@
 #include "LTexture.h"
 
-Sdl::LTexture::LTexture(SDL_Renderer* renderer) {
+Sdl::LTexture::LTexture() {
     //Initialize
-    this->renderer = renderer;
     mTexture = nullptr;
     mWidth = 0;
     mHeight = 0;
@@ -13,7 +12,7 @@ Sdl::LTexture::~LTexture() {
     free();
 }
 
-bool Sdl::LTexture::loadFromFile(std::string path) {
+bool Sdl::LTexture::loadFromFile(std::string path, SDL_Renderer* renderer) {
     //Get rid of preexisting texture
     free();
 
@@ -47,6 +46,38 @@ bool Sdl::LTexture::loadFromFile(std::string path) {
     return mTexture != nullptr;
 }
 
+bool Sdl::LTexture::loadFromRenderedText(std::string textureText, SDL_Color textColor, TTF_Font* font,
+                                         SDL_Renderer* renderer) {
+    //Get rid of preexisting texture
+    free();
+
+    //Render text surface
+    SDL_Surface* textSurface = TTF_RenderText_Solid(font, textureText.c_str(), textColor);
+    if (textSurface == nullptr) {
+        printf("Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError());
+    } else {
+        //Create texture from surface pixels
+        mTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+        if (mTexture == nullptr) {
+            printf("Unable to create texture from rendered text! SDL Error: %s\n", SDL_GetError());
+        } else {
+            //Get image dimensions
+            mWidth = textSurface->w;
+            mHeight = textSurface->h;
+        }
+
+        //Get rid of old surface
+        SDL_FreeSurface(textSurface);
+    }
+
+    //Return success
+    return mTexture != nullptr;
+}
+
+void Sdl::LTexture::setColor(Uint8 red, Uint8 green, Uint8 blue) {
+    SDL_SetTextureColorMod(mTexture, red, green, blue);
+}
+
 void Sdl::LTexture::free() {
     //Free texture if it exists
     if (mTexture != nullptr) {
@@ -57,15 +88,9 @@ void Sdl::LTexture::free() {
     }
 }
 
-void Sdl::LTexture::render(int x, int y, int w, int h, SDL_Rect* clip) {
+void Sdl::LTexture::render(int x, int y, int w, int h, SDL_Rect* clip, SDL_Renderer* renderer) {
     //Set rendering space and render to screen
-    SDL_Rect renderQuad = {x, y, mWidth, mHeight};
-
-    //Set clip rendering dimensions
-    if (clip != nullptr) {
-        renderQuad.w = w;
-        renderQuad.h = h;
-    }
+    SDL_Rect renderQuad = {x, y, w, h};
 
     //Render to screen
     SDL_RenderCopy(renderer, mTexture, clip, &renderQuad);

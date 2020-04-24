@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SpaceInvaders.dir/Abs/Controller.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Abs/Entities/BonusEntity.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyBullet.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Abs/Entities/EnemyEntity.cpp.obj"
@@ -10,7 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerEntity.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.obj"
-  "CMakeFiles/SpaceInvaders.dir/Abs/Factory.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Game.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyBullet.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.obj"

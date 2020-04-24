@@ -12,26 +12,26 @@ class Game {
 public:
     static Game* getInstance(Abs::Factory*);
 
-    /**
-     * Run the game
-     */
+    static void destroyInstance();
+
     void run();
 
 private:
-    /**
-     * Constructor of Game, takes a factory of your choosing (needs to inherit from Abs::Factory)
-     */
     Game(Abs::Factory*);
+
+    ~Game();
+
     static Game* instance;
 
-    Abs::Factory* gameFactory;                  //The factory that will create all specific items
-    int lives, score, enemyShootCooldownCounter, enemyMoveCooldownCounter;
+    Abs::Factory* gameFactory;
+    int lives, score, enemyShootCooldownCounter, enemyMoveCooldownCounter, bonusSpawnCooldownCounter;
     std::vector<EVENT> events;
-    bool isQuit, isEnemyMovingLeft, isEnemyMovingHorizontal;
+    bool isQuit, isEnemyMovingLeft, isEnemyMovingHorizontal, isGameOver, hasSoundPlayed;
 
     Abs::PlayerShip* playerShip;
     Abs::Controller* controller;
     Abs::PlayerBullet* playerBullet;
+    Abs::BonusEntity* bonusEntity;
     std::vector<std::vector<Abs::EnemyShip*>> enemies;
     std::vector<Abs::EnemyBullet*> enemyBullets;
 
@@ -45,10 +45,15 @@ private:
 
     void enemyShipHandler();
 
+    void drawEnemyShip();
+
     void enemyBulletHandler();
 
-    bool isCollision(Abs::Entity*, Abs::Entity*);
-};
+    void bonusEntityHandler();
 
+    bool isCollision(Abs::Entity*, Abs::Entity*);
+
+    static int getScore(ENTITY);
+};
 
 #endif

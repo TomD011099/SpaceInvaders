@@ -23,3 +23,12 @@ std::vector<EVENT> Sdl::SDLController::pollEvents() {
 
     return events;
 }
+
+bool Sdl::SDLController::isQuit() {
+    while (SDL_PollEvent(&e) != 0) {
+        if (e.type == SDL_QUIT)
+            return true;
+    }
+
+    return false;
+}

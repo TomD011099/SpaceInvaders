@@ -9,6 +9,8 @@
 #include "Entities/SDLEnemyShip.h"
 #include "Entities/SDLPlayerBullet.h"
 #include "Entities/SDLEnemyBullet.h"
+#include "Entities/SDLPosBonus.h"
+#include "Entities/SDLNegBonus.h"
 #include "SDLController.h"
 #include "Window/SDLWindow.h"
 
@@ -55,9 +57,15 @@ namespace Sdl {
 
         Abs::EnemyBullet* createEnemyBullet(float, float, float, float);
 
-        void draw();
+        Abs::PosBonus* createPosBonus(float, float, float, float);
+
+        Abs::NegBonus* createNegBonus(float, float, float, float);
+
+        void draw(int, int, bool);
 
         void setupFrame();
+
+        void playSound(SOUND);
 
     private:
         SDLWindow* window;

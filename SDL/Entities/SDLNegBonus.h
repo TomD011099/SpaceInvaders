@@ -2,12 +2,17 @@
 #define SPACEINVADERS_SDLNEGBONUS_H
 
 #include "../../Abs/Entities/NegBonus.h"
+#include "../Window/SDLWindow.h"
 
 namespace Sdl {
     class SDLNegBonus : public Abs::NegBonus {
     public:
+        SDLNegBonus(SDLWindow*, float, float, float, float);
+
         void visualize();
-        void draw() {};
+
+    private:
+        SDLWindow* window;
     };
 }
 

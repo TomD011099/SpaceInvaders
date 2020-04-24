@@ -11,6 +11,8 @@ namespace Sdl {
 
         void visualize();
 
+        void hit();
+
     private:
         SDLWindow* window;
     };

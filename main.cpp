@@ -6,7 +6,7 @@ int main(int argc, char* argv[]) {
     Abs::Factory* factory = new Sdl::SDLFactory();
     Game* g = Game::getInstance(factory);
     g->run();
-    delete g;
+    g->destroyInstance();
     delete factory;
 
     return 0;

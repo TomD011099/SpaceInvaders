@@ -24,10 +24,31 @@ Abs::Controller* Sdl::SDLFactory::createController() {
 }
 
 Abs::PlayerBullet* Sdl::SDLFactory::createPlayerBullet(float x, float y, float w, float h) {
+    window->playSound(SHOOT);
     return new Sdl::SDLPlayerBullet(window, x, y, w, h);
 }
 
-void Sdl::SDLFactory::draw() {
+Abs::EnemyBullet* Sdl::SDLFactory::createEnemyBullet(float x, float y, float w, float h) {
+    return new Sdl::SDLEnemyBullet(window, x, y, w, h);
+}
+
+Abs::PosBonus* Sdl::SDLFactory::createPosBonus(float x, float y, float w, float h) {
+    window->playSound(BONUS_SPAWN);
+    return new Sdl::SDLPosBonus(window, x, y, w, h);
+}
+
+Abs::NegBonus* Sdl::SDLFactory::createNegBonus(float x, float y, float w, float h) {
+    window->playSound(BONUS_SPAWN);
+    return new Sdl::SDLNegBonus(window, x, y, w, h);
+}
+
+void Sdl::SDLFactory::draw(int score, int lives, bool isEndScreen) {
+    if (!isEndScreen) {
+        window->printScore(score);
+        window->printLives(lives);
+    } else {
+        window->printScoreEnd(score);
+    }
     window->draw();
 }
 
@@ -35,6 +56,6 @@ void Sdl::SDLFactory::setupFrame() {
     window->setup();
 }
 
-Abs::EnemyBullet* Sdl::SDLFactory::createEnemyBullet(float x, float y, float w, float h) {
-    return new Sdl::SDLEnemyBullet(window, x, y, w, h);
+void Sdl::SDLFactory::playSound(SOUND s) {
+    window->playSound(s);
 }

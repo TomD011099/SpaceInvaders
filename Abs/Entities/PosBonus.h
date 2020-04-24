@@ -6,6 +6,8 @@
 namespace Abs{
     class PosBonus: public BonusEntity {
     public:
+        PosBonus(float, float, float, float);
+
         virtual void visualize() = 0;
     };
 }

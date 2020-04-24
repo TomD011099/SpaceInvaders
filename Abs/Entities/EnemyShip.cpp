@@ -12,7 +12,7 @@ bool Abs::EnemyShip::isAlive() {
 
 void Abs::EnemyShip::hit() {
     alive = false;
-    type = WRECK;
+    type = ENEMY_WRECK;
     deathTime = 0;
 }
 
@@ -25,3 +25,6 @@ void Abs::EnemyShip::tick() {
     gone = (deathTime == NORMALISED_ENEMY_DEATH_TIME);
 }
 
+ENTITY Abs::EnemyShip::getType() {
+    return type;
+}

@@ -10,7 +10,11 @@ namespace Sdl {
     public:
         SDLController();
 
+        ~SDLController() = default;
+
         std::vector<EVENT> pollEvents();
+
+        bool isQuit();
 
     private:
         SDL_Event e;

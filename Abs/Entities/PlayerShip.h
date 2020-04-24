@@ -9,6 +9,13 @@ namespace Abs{
         PlayerShip(float, float, float, float);
 
         virtual void visualize() = 0;
+
+        virtual void killed();
+
+        ENTITY getSkin();
+
+    private:
+        ENTITY skin;
     };
 }
 

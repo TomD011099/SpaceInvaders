@@ -12,10 +12,10 @@ add_executable(SpaceInvaders main.cpp
         GameConstants.h
         Game.cpp                    Game.h
 
-        Abs/Factory.cpp             Abs/Factory.h
+        Abs/Factory.h
         SDL/SDLFactory.cpp          SDL/SDLFactory.h
 
-        Abs/Controller.cpp          Abs/Controller.h
+        Abs/Controller.h
         SDL/SDLController.cpp       SDL/SDLController.h
 
         SDL/Window/SDLWindow.cpp    SDL/Window/SDLWindow.h
@@ -38,4 +38,4 @@ add_executable(SpaceInvaders main.cpp
                 Abs/Entities/NegBonus.cpp           Abs/Entities/NegBonus.h
                 SDL/Entities/SDLNegBonus.cpp        SDL/Entities/SDLNegBonus.h)
 
-target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image)
+target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)

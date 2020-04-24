@@ -10,14 +10,18 @@ namespace Abs {
 
         bool isAlive();
 
-        void hit();
+        virtual void hit();
 
         bool isGone();
 
         void tick();
 
+        ENTITY getType();
+
     protected:
         ENTITY type;
+
+    protected:
         bool alive, gone;
         int deathTime;
     };

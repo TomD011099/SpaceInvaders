@@ -5,6 +5,8 @@
 #include "Entities/EnemyShip.h"
 #include "Entities/PlayerBullet.h"
 #include "Entities/EnemyBullet.h"
+#include "Entities/PosBonus.h"
+#include "Entities/NegBonus.h"
 #include "Controller.h"
 
 namespace Abs{
@@ -22,9 +24,15 @@ namespace Abs{
 
         virtual Abs::EnemyBullet* createEnemyBullet(float, float, float, float) = 0;
 
-        virtual void draw() = 0;
+        virtual Abs::PosBonus* createPosBonus(float, float, float, float) = 0;
+
+        virtual Abs::NegBonus* createNegBonus(float, float, float, float) = 0;
+
+        virtual void draw(int, int, bool) = 0;
 
         virtual void setupFrame() = 0;
+
+        virtual void playSound(SOUND) = 0;
     };
 }
 
