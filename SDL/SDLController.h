@@ -6,6 +6,7 @@
 #include <iostream>
 
 namespace Sdl {
+
     class SDLController : public Abs::Controller {
     public:
         SDLController();
@@ -17,6 +18,7 @@ namespace Sdl {
         bool isQuit();
 
     private:
+        //The SDL event checker
         SDL_Event e;
     };
 }

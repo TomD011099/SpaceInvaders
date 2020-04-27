@@ -20,38 +20,16 @@ namespace Sdl {
      */
     class SDLFactory : public Abs::Factory {
     public:
-        /**
-         * The constructor of the SDLFactory
-         * This will initialize the SDL window
-         */
+
         SDLFactory();
 
-        /**
-         * The destructor of the SDLFactory
-         */
         ~SDLFactory();
 
-        /**
-         * Creates a new player
-         *
-         * @return Playership* a pointer to an SDLPlayership
-         */
         Abs::PlayerShip* createPlayerShip(double, double, double, double);
 
-        /**
-         * Creates a new enemy
-         *
-         * @return EnemyShip* a pointer to an SDLEnemyShip
-         */
         Abs::EnemyShip* createEnemyShip(double, double, double, double, ENTITY);
 
-        /**
-         * Creates a controller, which will check player input
-         *
-         * @return Controller* a pointer to an SDLController
-         */
         Abs::Controller* createController();
-
 
         Abs::PlayerBullet* createPlayerBullet(double, double, double, double);
 
@@ -68,6 +46,7 @@ namespace Sdl {
         void playSound(SOUND);
 
     private:
+        //The window where the game will be shown
         SDLWindow* window;
     };
 }

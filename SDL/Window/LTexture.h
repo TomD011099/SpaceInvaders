@@ -7,6 +7,11 @@
 #include <SDL_ttf.h>
 
 namespace Sdl {
+    /**
+     * This class is used for spritesheetrendering and textrendering
+     *
+     * Source: http://lazyfoo.net/tutorials/SDL/index.php
+     */
     class LTexture {
     public:
         //Initializes variables
@@ -21,19 +26,11 @@ namespace Sdl {
         //Creates image from font string
         bool loadFromRenderedText(std::string, SDL_Color, TTF_Font*, SDL_Renderer*);
 
-        //Set color modulation
-        void setColor( Uint8 red, Uint8 green, Uint8 blue );
-
         //Deallocates texture
         void free();
 
         //Renders texture at given point
         void render(int, int, int, int, SDL_Rect*, SDL_Renderer*);
-
-        //Gets image dimensions
-        int getWidth();
-
-        int getHeight();
 
     private:
         SDL_Texture* mTexture;      //The actual hardware texture

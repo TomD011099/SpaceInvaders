@@ -8,11 +8,14 @@
 #include <map>
 
 namespace Sdl {
+    /**
+     * The class that will do most of the SDL visualization
+     */
     class SDLWindow {
     public:
-        SDLWindow();
+        static SDLWindow* getInstance();
 
-        ~SDLWindow();
+        static void destroyInstance();
 
         bool init();
 
@@ -33,19 +36,25 @@ namespace Sdl {
         void setup();
 
     private:
-        SDL_Window* window;         //The window we'll render to
-        SDL_Renderer* renderer;     //The use of a renderer means we can use the GPU for our display
-        SDL_Texture* background;
+        SDLWindow();
 
-        TTF_Font* font;
+        ~SDLWindow();
 
-        LTexture spriteSheetTexture;
-        LTexture score;
-        LTexture lives;
-        LTexture endScore;
+        static SDLWindow* instance;     //The Window instance
 
-        std::map<ENTITY, SDL_Rect> spriteMap;
-        std::map<SOUND, Mix_Chunk*> soundMap;
+        SDL_Window* window;             //The window we'll render to
+        SDL_Renderer* renderer;         //The use of a renderer means we can use the GPU for our display
+        SDL_Texture* background;        //The background
+
+        TTF_Font* font;                 //Used font
+
+        LTexture spriteSheetTexture;    //The spritesheet
+        LTexture score;                 //Display for score
+        LTexture lives;                 //Display for lives
+        LTexture endScore;              //Display for score at the end of the game
+
+        std::map<ENTITY, SDL_Rect> spriteMap;   //All sprites from the spritesheet
+        std::map<SOUND, Mix_Chunk*> soundMap;   //All sounds
     };
 }
 

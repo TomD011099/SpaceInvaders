@@ -39,7 +39,7 @@ private:
 
     void generateEnemies();
 
-    void playerShipHandler(bool*);
+    void playerShipHandler();
 
     void playerBulletHandler();
 
@@ -52,8 +52,6 @@ private:
     void bonusEntityHandler();
 
     bool isCollision(Abs::Entity*, Abs::Entity*);
-
-    int getScore(ENTITY);
 };
 
 #endif

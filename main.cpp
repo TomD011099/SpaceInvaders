@@ -5,8 +5,11 @@
 int main(int argc, char* argv[]) {
     Abs::Factory* factory = new Sdl::SDLFactory();
     Game* g = Game::getInstance(factory);
+
+    //Run the game
     g->run();
-    g->destroyInstance();
+
+    Game::destroyInstance();
     delete factory;
 
     return 0;

@@ -1,5 +1,8 @@
 #include "LTexture.h"
 
+/**
+ * Constructor of LTexture
+ */
 Sdl::LTexture::LTexture() {
     //Initialize
     mTexture = nullptr;
@@ -7,11 +10,21 @@ Sdl::LTexture::LTexture() {
     mHeight = 0;
 }
 
+/**
+ * Destructor of LTexture
+ */
 Sdl::LTexture::~LTexture() {
     //Deallocate
     free();
 }
 
+/**
+ * Load ab LTexture from a file
+ *
+ * @param path The path of the file
+ * @param renderer  The renderer
+ * @return boolean for success
+ */
 bool Sdl::LTexture::loadFromFile(std::string path, SDL_Renderer* renderer) {
     //Get rid of preexisting texture
     free();
@@ -46,6 +59,15 @@ bool Sdl::LTexture::loadFromFile(std::string path, SDL_Renderer* renderer) {
     return mTexture != nullptr;
 }
 
+/**
+ * Load an LTexture from a string
+ *
+ * @param textureText The text to be displayed
+ * @param textColor The color of the text
+ * @param font The font the text has to be rendered in
+ * @param renderer The renderer
+ * @return boolean for success
+ */
 bool Sdl::LTexture::loadFromRenderedText(std::string textureText, SDL_Color textColor, TTF_Font* font,
                                          SDL_Renderer* renderer) {
     //Get rid of preexisting texture
@@ -74,10 +96,9 @@ bool Sdl::LTexture::loadFromRenderedText(std::string textureText, SDL_Color text
     return mTexture != nullptr;
 }
 
-void Sdl::LTexture::setColor(Uint8 red, Uint8 green, Uint8 blue) {
-    SDL_SetTextureColorMod(mTexture, red, green, blue);
-}
-
+/**
+ * Deallocates the texture
+ */
 void Sdl::LTexture::free() {
     //Free texture if it exists
     if (mTexture != nullptr) {
@@ -88,18 +109,20 @@ void Sdl::LTexture::free() {
     }
 }
 
+/**
+ * Render the texture to the window
+ *
+ * @param x x position
+ * @param y y position
+ * @param w Width
+ * @param h Height
+ * @param clip The sprite to be rendered
+ * @param renderer The renderer
+ */
 void Sdl::LTexture::render(int x, int y, int w, int h, SDL_Rect* clip, SDL_Renderer* renderer) {
     //Set rendering space and render to screen
     SDL_Rect renderQuad = {x, y, w, h};
 
     //Render to screen
     SDL_RenderCopy(renderer, mTexture, clip, &renderQuad);
-}
-
-int Sdl::LTexture::getWidth() {
-    return mWidth;
-}
-
-int Sdl::LTexture::getHeight() {
-    return mHeight;
 }

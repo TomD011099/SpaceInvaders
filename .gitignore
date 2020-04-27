@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+.idea/workspace.xml
+
+cmake-build-debug/CMakeFiles/SpaceInvaders.dir/CXX.includecache
