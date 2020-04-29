@@ -8,7 +8,7 @@
 
 namespace Sdl {
     /**
-     * This class is used for spritesheetrendering and textrendering
+     * This class is used for spritesheetrendering and text rendering
      *
      * Source: http://lazyfoo.net/tutorials/SDL/index.php
      */

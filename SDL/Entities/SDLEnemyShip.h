@@ -5,16 +5,21 @@
 #include "../Window/SDLWindow.h"
 
 namespace Sdl {
+    /**
+     * An implementation of Abs::EnemyShip
+     */
     class SDLEnemyShip : public Abs::EnemyShip {
     public:
-        SDLEnemyShip(Sdl::SDLWindow*, double, double, double , double, ENTITY);
+        SDLEnemyShip(Sdl::SDLWindow*, double, double, double, double, ENTITY);
+
+        ~SDLEnemyShip() = default;
 
         void visualize();
 
         void hit();
 
     private:
-        SDLWindow* window;
+        SDLWindow* window;      //The SDL game window
     };
 }
 

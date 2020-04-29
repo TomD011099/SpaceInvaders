@@ -9,7 +9,10 @@
 #include "Entities/NegBonus.h"
 #include "Controller.h"
 
-namespace Abs{
+namespace Abs {
+    /**
+     * The abstract factory that has to be implemented to play the game for a specific game-engine (like SDL2)
+     */
     class Factory {
     public:
         virtual ~Factory() = default;

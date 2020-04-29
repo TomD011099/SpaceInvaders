@@ -3,12 +3,13 @@
 
 #include "BonusEntity.h"
 
-namespace Abs{
-    class PosBonus: public BonusEntity {
+namespace Abs {
+    /**
+     * An abstract PosBonus to be implemented for use by a specific game engine
+     */
+    class PosBonus : public BonusEntity {
     public:
         PosBonus(double, double, double, double);
-
-        virtual void visualize() = 0;
     };
 }
 

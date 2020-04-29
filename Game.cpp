@@ -235,7 +235,7 @@ void Game::playerBulletHandler() {
     if (playerBullet != nullptr) {  //If playerbullet is already on the screen
 
         //Movement
-        if (playerBullet->getYPos() < 0) {  //If the bullet has passed the edge //TODO maybe change 0 to -h/2
+        if (playerBullet->getYPos() < -playerBullet->getHeight() / 2) {  //If the bullet has passed the edge
             //Delete the bullet -> good for memory & a new bullet can be fired next frame
             delete playerBullet;
             playerBullet = nullptr;
@@ -341,7 +341,7 @@ void Game::enemyShipHandler() {
         //Calculate movement
         if (isEnemyMovingLeft) { //If moving left
             //If moving left won't keep the aliens on the screen
-            if (minX - ENEMY_SPEED <= ENEMYSHIP_WIDHT/2 && isEnemyMovingHorizontal) {
+            if (minX - ENEMY_SPEED <= ENEMYSHIP_WIDHT / 2 && isEnemyMovingHorizontal) {
                 //Move down
                 isEnemyMovingHorizontal = false;
                 //After that move right
@@ -429,10 +429,11 @@ void Game::enemyShipHandler() {
  */
 void Game::enemyBulletHandler() {
     //Iterate over all the bullets
+    std::cout << enemyBullets.size() << "\n";
     for (int i = 0; i < enemyBullets.size(); i++) {
         Abs::EnemyBullet* bullet = enemyBullets.at(i);
         //Test if they've gone too far
-        if (bullet->getYPos() < 0) { //TODO maybe change 0 to h/2
+        if (bullet->getYPos() > 1 + (bullet->getHeight() / 2)) {
             //Remove them if they've gone too far
             delete bullet;
             enemyBullets.erase(enemyBullets.begin() + (i--));
@@ -464,7 +465,8 @@ void Game::enemyBulletHandler() {
 void Game::bonusEntityHandler() {
     //Test if the bonusentity already exists on the screen
     if (bonusEntity != nullptr) {   //If the bonusentity already exists
-        if ((bonusEntity->getXPos()) >= (1 + (bonusEntity->getWidth() / 2.0))) { //If the bonusentity will move out of bounds
+        if ((bonusEntity->getXPos()) >=
+            (1 + (bonusEntity->getWidth() / 2.0))) { //If the bonusentity will move out of bounds
             //Remove bonusentity so a new one can spawn
             delete bonusEntity;
             bonusEntity = nullptr;

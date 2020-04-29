@@ -21,19 +21,19 @@ private:
 
     ~Game();
 
-    static Game* instance;
+    static Game* instance;          //The game-instance
 
-    Abs::Factory* gameFactory;
+    Abs::Factory* gameFactory;      //An implementation of an Abs::Factory
     int lives, score, enemyShootCooldownCounter, enemyMoveCooldownCounter, bonusSpawnCooldownCounter;
     std::vector<EVENT> events;
     bool isQuit, isEnemyMovingLeft, isEnemyMovingHorizontal, isGameOver, hasSoundPlayed, showEndScore;
 
-    Abs::PlayerShip* playerShip;
-    Abs::Controller* controller;
-    Abs::PlayerBullet* playerBullet;
-    Abs::BonusEntity* bonusEntity;
-    std::vector<std::vector<Abs::EnemyShip*>> enemies;
-    std::vector<Abs::EnemyBullet*> enemyBullets;
+    Abs::PlayerShip* playerShip;                        //The playership
+    Abs::Controller* controller;                        //The controller
+    Abs::PlayerBullet* playerBullet;                    //The playerbullet
+    Abs::BonusEntity* bonusEntity;                      //The bonusentity
+    std::vector<std::vector<Abs::EnemyShip*>> enemies;  //The enemies
+    std::vector<Abs::EnemyBullet*> enemyBullets;        //The enemybullets
 
     void setup();
 

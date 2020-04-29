@@ -18,8 +18,7 @@ namespace Sdl {
         bool isQuit();
 
     private:
-        //The SDL event checker
-        SDL_Event e;
+        SDL_Event e;        //The SDL event checker
     };
 }
 

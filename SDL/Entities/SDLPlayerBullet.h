@@ -4,8 +4,11 @@
 #include "../../Abs/Entities/PlayerBullet.h"
 #include "../Window/SDLWindow.h"
 
-namespace Sdl{
-    class SDLPlayerBullet: public Abs::PlayerBullet{
+namespace Sdl {
+    /**
+     * An implementation of Abs::PlayerBullet
+     */
+    class SDLPlayerBullet : public Abs::PlayerBullet {
     public:
         SDLPlayerBullet(SDLWindow*, double, double, double, double);
 
@@ -14,7 +17,7 @@ namespace Sdl{
         void visualize();
 
     private:
-        SDLWindow* window;
+        SDLWindow* window;      //The SDL game window
     };
 }
 

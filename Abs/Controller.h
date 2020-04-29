@@ -5,6 +5,9 @@
 #include <vector>
 
 namespace Abs {
+    /**
+     * An abstract controller that has to be implemented with the desired input method
+     */
     class Controller {
     public:
         virtual ~Controller() = default;

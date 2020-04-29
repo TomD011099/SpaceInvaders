@@ -2,9 +2,14 @@
   <dictionary name="tomde">
     <words>
       <w>absdisplay</w>
+      <w>bonusentity</w>
       <w>cooldown</w>
+      <w>enemybullets</w>
       <w>enemyship</w>
+      <w>playerbullet</w>
+      <w>playership</w>
       <w>spaceinvaders</w>
+      <w>spritesheetrendering</w>
     </words>
   </dictionary>
 </component>

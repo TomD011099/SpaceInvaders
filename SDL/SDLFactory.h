@@ -46,8 +46,7 @@ namespace Sdl {
         void playSound(SOUND);
 
     private:
-        //The window where the game will be shown
-        SDLWindow* window;
+        SDLWindow* window;      //The window where the game will be shown
     };
 }
 

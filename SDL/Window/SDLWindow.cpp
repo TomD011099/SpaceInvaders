@@ -145,13 +145,13 @@ bool Sdl::SDLWindow::loadMedia() {
         std::cout << "Failed to load sprite sheet texture!\n";
         success = false;
     } else {
-        //Set top left sprite
+        //Create sprites
+
         spriteMap[PLAYERSHIP].x = 150;
         spriteMap[PLAYERSHIP].y = 638;
         spriteMap[PLAYERSHIP].w = 73;
         spriteMap[PLAYERSHIP].h = 52;
 
-        //Set enemy sprites
         spriteMap[ENEMYSHIP0].x = 19;
         spriteMap[ENEMYSHIP0].y = 14;
         spriteMap[ENEMYSHIP0].w = 110;
@@ -208,6 +208,7 @@ bool Sdl::SDLWindow::loadMedia() {
         spriteMap[PLAYER_WRECK].h = 60;
     }
 
+    //Load background
     SDL_Surface* loadedSurface = IMG_Load("../Media/background.jpeg");
     if (loadedSurface == nullptr) {
         printf("Unable to load image %s! SDL_image Error: %s\n", "../Media/background.jpeg", IMG_GetError());

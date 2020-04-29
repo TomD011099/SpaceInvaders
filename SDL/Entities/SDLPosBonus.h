@@ -4,15 +4,20 @@
 #include "../../Abs/Entities/PosBonus.h"
 #include "../Window/SDLWindow.h"
 
-namespace Sdl{
-    class SDLPosBonus: public Abs::PosBonus {
+namespace Sdl {
+    /**
+     * An implementation of Abs::PosBonus
+     */
+    class SDLPosBonus : public Abs::PosBonus {
     public:
         SDLPosBonus(SDLWindow*, double, double, double, double);
+
+        ~SDLPosBonus() = default;
 
         void visualize();
 
     private:
-        SDLWindow* window;
+        SDLWindow* window;      //The SDL game window
     };
 }
 
