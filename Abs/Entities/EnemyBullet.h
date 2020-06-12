@@ -3,14 +3,15 @@
 
 #include "EnemyEntity.h"
 
-namespace Abs{
-    class EnemyBullet: public EnemyEntity {
+namespace Abs {
+    /**
+     * The abstract enemybullet, implement this to use it for a specific engine
+     */
+    class EnemyBullet : public EnemyEntity {
     public:
         EnemyBullet(double, double, double, double);
 
         virtual ~EnemyBullet() = default;
-
-        virtual void visualize() = 0;
     };
 }
 

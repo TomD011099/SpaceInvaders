@@ -38,10 +38,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\tomde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.6668.126\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\tomde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.7846.88\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Users\tomde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.6668.126\bin\cmake\win\bin\cmake.exe -E remove -f
+RM = C:\Users\tomde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.7846.88\bin\cmake\win\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = "C:\Users\tomde\OneDrive - uantwerpen\School\6 Geavanceerde P
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\tomde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.6668.126\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	C:\Users\tomde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.7846.88\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:\Users\tomde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.6668.126\bin\cmake\win\bin\cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:\Users\tomde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.7846.88\bin\cmake\win\bin\cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -257,33 +257,6 @@ Abs/Entities/Entity.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/Entity.cpp.s
 .PHONY : Abs/Entities/Entity.cpp.s
 
-Abs/Entities/NegBonus.obj: Abs/Entities/NegBonus.cpp.obj
-
-.PHONY : Abs/Entities/NegBonus.obj
-
-# target to build an object file
-Abs/Entities/NegBonus.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/NegBonus.cpp.obj
-.PHONY : Abs/Entities/NegBonus.cpp.obj
-
-Abs/Entities/NegBonus.i: Abs/Entities/NegBonus.cpp.i
-
-.PHONY : Abs/Entities/NegBonus.i
-
-# target to preprocess a source file
-Abs/Entities/NegBonus.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/NegBonus.cpp.i
-.PHONY : Abs/Entities/NegBonus.cpp.i
-
-Abs/Entities/NegBonus.s: Abs/Entities/NegBonus.cpp.s
-
-.PHONY : Abs/Entities/NegBonus.s
-
-# target to generate assembly for a file
-Abs/Entities/NegBonus.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/NegBonus.cpp.s
-.PHONY : Abs/Entities/NegBonus.cpp.s
-
 Abs/Entities/PlayerBullet.obj: Abs/Entities/PlayerBullet.cpp.obj
 
 .PHONY : Abs/Entities/PlayerBullet.obj
@@ -365,33 +338,6 @@ Abs/Entities/PlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.s
 .PHONY : Abs/Entities/PlayerShip.cpp.s
 
-Abs/Entities/PosBonus.obj: Abs/Entities/PosBonus.cpp.obj
-
-.PHONY : Abs/Entities/PosBonus.obj
-
-# target to build an object file
-Abs/Entities/PosBonus.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.obj
-.PHONY : Abs/Entities/PosBonus.cpp.obj
-
-Abs/Entities/PosBonus.i: Abs/Entities/PosBonus.cpp.i
-
-.PHONY : Abs/Entities/PosBonus.i
-
-# target to preprocess a source file
-Abs/Entities/PosBonus.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.i
-.PHONY : Abs/Entities/PosBonus.cpp.i
-
-Abs/Entities/PosBonus.s: Abs/Entities/PosBonus.cpp.s
-
-.PHONY : Abs/Entities/PosBonus.s
-
-# target to generate assembly for a file
-Abs/Entities/PosBonus.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/PosBonus.cpp.s
-.PHONY : Abs/Entities/PosBonus.cpp.s
-
 Game.obj: Game.cpp.obj
 
 .PHONY : Game.obj
@@ -418,6 +364,33 @@ Game.s: Game.cpp.s
 Game.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Game.cpp.s
 .PHONY : Game.cpp.s
+
+SDL/Entities/SDLBonusEntity.obj: SDL/Entities/SDLBonusEntity.cpp.obj
+
+.PHONY : SDL/Entities/SDLBonusEntity.obj
+
+# target to build an object file
+SDL/Entities/SDLBonusEntity.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLBonusEntity.cpp.obj
+.PHONY : SDL/Entities/SDLBonusEntity.cpp.obj
+
+SDL/Entities/SDLBonusEntity.i: SDL/Entities/SDLBonusEntity.cpp.i
+
+.PHONY : SDL/Entities/SDLBonusEntity.i
+
+# target to preprocess a source file
+SDL/Entities/SDLBonusEntity.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLBonusEntity.cpp.i
+.PHONY : SDL/Entities/SDLBonusEntity.cpp.i
+
+SDL/Entities/SDLBonusEntity.s: SDL/Entities/SDLBonusEntity.cpp.s
+
+.PHONY : SDL/Entities/SDLBonusEntity.s
+
+# target to generate assembly for a file
+SDL/Entities/SDLBonusEntity.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLBonusEntity.cpp.s
+.PHONY : SDL/Entities/SDLBonusEntity.cpp.s
 
 SDL/Entities/SDLEnemyBullet.obj: SDL/Entities/SDLEnemyBullet.cpp.obj
 
@@ -473,33 +446,6 @@ SDL/Entities/SDLEnemyShip.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLEnemyShip.cpp.s
 .PHONY : SDL/Entities/SDLEnemyShip.cpp.s
 
-SDL/Entities/SDLNegBonus.obj: SDL/Entities/SDLNegBonus.cpp.obj
-
-.PHONY : SDL/Entities/SDLNegBonus.obj
-
-# target to build an object file
-SDL/Entities/SDLNegBonus.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.obj
-.PHONY : SDL/Entities/SDLNegBonus.cpp.obj
-
-SDL/Entities/SDLNegBonus.i: SDL/Entities/SDLNegBonus.cpp.i
-
-.PHONY : SDL/Entities/SDLNegBonus.i
-
-# target to preprocess a source file
-SDL/Entities/SDLNegBonus.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.i
-.PHONY : SDL/Entities/SDLNegBonus.cpp.i
-
-SDL/Entities/SDLNegBonus.s: SDL/Entities/SDLNegBonus.cpp.s
-
-.PHONY : SDL/Entities/SDLNegBonus.s
-
-# target to generate assembly for a file
-SDL/Entities/SDLNegBonus.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLNegBonus.cpp.s
-.PHONY : SDL/Entities/SDLNegBonus.cpp.s
-
 SDL/Entities/SDLPlayerBullet.obj: SDL/Entities/SDLPlayerBullet.cpp.obj
 
 .PHONY : SDL/Entities/SDLPlayerBullet.obj
@@ -553,33 +499,6 @@ SDL/Entities/SDLPlayerShip.s: SDL/Entities/SDLPlayerShip.cpp.s
 SDL/Entities/SDLPlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPlayerShip.cpp.s
 .PHONY : SDL/Entities/SDLPlayerShip.cpp.s
-
-SDL/Entities/SDLPosBonus.obj: SDL/Entities/SDLPosBonus.cpp.obj
-
-.PHONY : SDL/Entities/SDLPosBonus.obj
-
-# target to build an object file
-SDL/Entities/SDLPosBonus.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.obj
-.PHONY : SDL/Entities/SDLPosBonus.cpp.obj
-
-SDL/Entities/SDLPosBonus.i: SDL/Entities/SDLPosBonus.cpp.i
-
-.PHONY : SDL/Entities/SDLPosBonus.i
-
-# target to preprocess a source file
-SDL/Entities/SDLPosBonus.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.i
-.PHONY : SDL/Entities/SDLPosBonus.cpp.i
-
-SDL/Entities/SDLPosBonus.s: SDL/Entities/SDLPosBonus.cpp.s
-
-.PHONY : SDL/Entities/SDLPosBonus.s
-
-# target to generate assembly for a file
-SDL/Entities/SDLPosBonus.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Entities/SDLPosBonus.cpp.s
-.PHONY : SDL/Entities/SDLPosBonus.cpp.s
 
 SDL/SDLController.obj: SDL/SDLController.cpp.obj
 
@@ -740,9 +659,6 @@ help:
 	@echo ... Abs/Entities/Entity.obj
 	@echo ... Abs/Entities/Entity.i
 	@echo ... Abs/Entities/Entity.s
-	@echo ... Abs/Entities/NegBonus.obj
-	@echo ... Abs/Entities/NegBonus.i
-	@echo ... Abs/Entities/NegBonus.s
 	@echo ... Abs/Entities/PlayerBullet.obj
 	@echo ... Abs/Entities/PlayerBullet.i
 	@echo ... Abs/Entities/PlayerBullet.s
@@ -752,30 +668,24 @@ help:
 	@echo ... Abs/Entities/PlayerShip.obj
 	@echo ... Abs/Entities/PlayerShip.i
 	@echo ... Abs/Entities/PlayerShip.s
-	@echo ... Abs/Entities/PosBonus.obj
-	@echo ... Abs/Entities/PosBonus.i
-	@echo ... Abs/Entities/PosBonus.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
+	@echo ... SDL/Entities/SDLBonusEntity.obj
+	@echo ... SDL/Entities/SDLBonusEntity.i
+	@echo ... SDL/Entities/SDLBonusEntity.s
 	@echo ... SDL/Entities/SDLEnemyBullet.obj
 	@echo ... SDL/Entities/SDLEnemyBullet.i
 	@echo ... SDL/Entities/SDLEnemyBullet.s
 	@echo ... SDL/Entities/SDLEnemyShip.obj
 	@echo ... SDL/Entities/SDLEnemyShip.i
 	@echo ... SDL/Entities/SDLEnemyShip.s
-	@echo ... SDL/Entities/SDLNegBonus.obj
-	@echo ... SDL/Entities/SDLNegBonus.i
-	@echo ... SDL/Entities/SDLNegBonus.s
 	@echo ... SDL/Entities/SDLPlayerBullet.obj
 	@echo ... SDL/Entities/SDLPlayerBullet.i
 	@echo ... SDL/Entities/SDLPlayerBullet.s
 	@echo ... SDL/Entities/SDLPlayerShip.obj
 	@echo ... SDL/Entities/SDLPlayerShip.i
 	@echo ... SDL/Entities/SDLPlayerShip.s
-	@echo ... SDL/Entities/SDLPosBonus.obj
-	@echo ... SDL/Entities/SDLPosBonus.i
-	@echo ... SDL/Entities/SDLPosBonus.s
 	@echo ... SDL/SDLController.obj
 	@echo ... SDL/SDLController.i
 	@echo ... SDL/SDLController.s

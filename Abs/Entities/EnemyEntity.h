@@ -3,12 +3,15 @@
 
 #include "Entity.h"
 
-namespace Abs{
-    class EnemyEntity: public Entity {
+namespace Abs {
+    /**
+     * The abstract enemyEntity super class for enemyShip and enemyBullet
+     */
+    class EnemyEntity : public Entity {
     public:
         EnemyEntity(double, double, double, double);
 
-        virtual void visualize() = 0;
+        virtual ~EnemyEntity() = default;
     };
 }
 

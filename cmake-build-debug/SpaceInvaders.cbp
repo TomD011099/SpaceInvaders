@@ -115,12 +115,6 @@
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/Entity.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/NegBonus.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/NegBonus.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerBullet.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
@@ -139,12 +133,6 @@
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerShip.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PosBonus.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PosBonus.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Factory.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
@@ -155,6 +143,12 @@
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/GameConstants.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLBonusEntity.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLBonusEntity.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLEnemyBullet.cpp">
@@ -169,12 +163,6 @@
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLEnemyShip.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLNegBonus.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLNegBonus.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPlayerBullet.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
@@ -185,12 +173,6 @@
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPlayerShip.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPosBonus.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPosBonus.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/SDLController.cpp">

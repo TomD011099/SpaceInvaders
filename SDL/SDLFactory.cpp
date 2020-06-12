@@ -83,21 +83,7 @@ Abs::EnemyBullet* Sdl::SDLFactory::createEnemyBullet(double x, double y, double 
 }
 
 /**
- * Creates a new posbonus
- *
- * @param x start x position
- * @param y start y position
- * @param w width
- * @param h height
- * @return A pointer to an SDLPosBonus
- */
-Abs::PosBonus* Sdl::SDLFactory::createPosBonus(double x, double y, double w, double h) {
-    window->playSound(BONUS_SPAWN);
-    return new Sdl::SDLPosBonus(window, x, y, w, h);
-}
-
-/**
- * Creates a new negbonus
+ * Creates a new bonus
  *
  * @param x start x position
  * @param y start y position
@@ -105,9 +91,9 @@ Abs::PosBonus* Sdl::SDLFactory::createPosBonus(double x, double y, double w, dou
  * @param h height
  * @return A pointer to an SDLNegBonus
  */
-Abs::NegBonus* Sdl::SDLFactory::createNegBonus(double x, double y, double w, double h) {
+Abs::BonusEntity* Sdl::SDLFactory::createBonusEntity(ENTITY e, double x, double y, double w, double h) {
     window->playSound(BONUS_SPAWN);
-    return new Sdl::SDLNegBonus(window, x, y, w, h);
+    return new Sdl::SDLBonusEntity(window, e, x, y, w, h);
 }
 
 /**

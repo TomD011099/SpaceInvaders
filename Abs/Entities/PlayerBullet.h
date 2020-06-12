@@ -3,14 +3,15 @@
 
 #include "PlayerEntity.h"
 
-namespace Abs{
-    class PlayerBullet: public PlayerEntity {
+namespace Abs {
+    /**
+     * The abstract playerbullet, implement this to use it for a specific engine
+     */
+    class PlayerBullet : public PlayerEntity {
     public:
         PlayerBullet(double, double, double, double);
 
         virtual ~PlayerBullet() = default;
-
-        virtual void visualize() = 0;
     };
 }
 

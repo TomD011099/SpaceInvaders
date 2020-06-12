@@ -3,19 +3,20 @@
 
 #include "Entity.h"
 
-namespace Abs{
-    class BonusEntity: public Entity {
+namespace Abs {
+    /**
+     * The abstract bonusentity, implement this to use it for a specific engine
+     */
+    class BonusEntity : public Entity {
     public:
         BonusEntity(ENTITY, double, double, double, double);
-
-        virtual void visualize() = 0;
 
         void move(double, double);
 
         ENTITY getEntity();
 
-    private:
-        ENTITY entity;
+    protected:
+        ENTITY entity;      //The specific type of bonusentity (POSBONUS or NEGBONUS)
     };
 }
 

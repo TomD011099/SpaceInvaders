@@ -4,18 +4,19 @@
 #include "PlayerEntity.h"
 
 namespace Abs{
+    /**
+     * The abstract playership, implement this to use it for a specific engine
+     */
     class PlayerShip: public PlayerEntity {
     public:
         PlayerShip(double, double, double, double);
-
-        virtual void visualize() = 0;
 
         virtual void killed();
 
         ENTITY getSkin();
 
     private:
-        ENTITY skin;
+        ENTITY skin;        //The skin of the player (used to display wreck)
     };
 }
 

@@ -33,9 +33,7 @@ add_executable(SpaceInvaders main.cpp
                 Abs/Entities/EnemyBullet.cpp        Abs/Entities/EnemyBullet.h
                 SDL/Entities/SDLEnemyBullet.cpp     SDL/Entities/SDLEnemyBullet.h
             Abs/Entities/BonusEntity.cpp        Abs/Entities/BonusEntity.h
-                Abs/Entities/PosBonus.cpp           Abs/Entities/PosBonus.h
-                SDL/Entities/SDLPosBonus.cpp        SDL/Entities/SDLPosBonus.h
-                Abs/Entities/NegBonus.cpp           Abs/Entities/NegBonus.h
-                SDL/Entities/SDLNegBonus.cpp        SDL/Entities/SDLNegBonus.h)
+            SDL/Entities/SDLBonusEntity.cpp     SDL/Entities/SDLBonusEntity.h
+        )
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)

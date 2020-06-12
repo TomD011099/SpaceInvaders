@@ -429,7 +429,6 @@ void Game::enemyShipHandler() {
  */
 void Game::enemyBulletHandler() {
     //Iterate over all the bullets
-    std::cout << enemyBullets.size() << "\n";
     for (int i = 0; i < enemyBullets.size(); i++) {
         Abs::EnemyBullet* bullet = enemyBullets.at(i);
         //Test if they've gone too far
@@ -483,10 +482,10 @@ void Game::bonusEntityHandler() {
             if (rand() % 100 <= BONUS_SPAWN_RATE) { //A chance to spawn a bonusentity
                 if (rand() % 100 <= 50) { //50/50 chance
                     //Spawn posbonus
-                    bonusEntity = gameFactory->createPosBonus(-BONUS_WIDTH / 2, 0.09, BONUS_WIDTH, BONUS_HEIGHT);
+                    bonusEntity = gameFactory->createBonusEntity(POSBONUS, -BONUS_WIDTH / 2, 0.09, BONUS_WIDTH, BONUS_HEIGHT);
                 } else {
                     //Spawn negbonus
-                    bonusEntity = gameFactory->createNegBonus(-BONUS_WIDTH / 2, 0.09, BONUS_WIDTH, BONUS_HEIGHT);
+                    bonusEntity = gameFactory->createBonusEntity(NEGBONUS, -BONUS_WIDTH / 2, 0.09, BONUS_WIDTH, BONUS_HEIGHT);
                 }
                 bonusEntity->visualize();
             }

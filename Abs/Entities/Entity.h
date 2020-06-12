@@ -4,6 +4,9 @@
 #include "../../GameConstants.h"
 
 namespace Abs {
+    /**
+     * The base class for all entities
+     */
     class Entity {
     public:
         Entity(double, double, double, double);
@@ -23,10 +26,10 @@ namespace Abs {
         double getHeight() const;
 
     protected:
-        double xPos;     //Position of center
-        double yPos;     //Position of center
-        double width;
-        double height;
+        double xPos;    //Position of center
+        double yPos;    //Position of center
+        double width;   //Width of entity
+        double height;  //Height of entity
     };
 }
 

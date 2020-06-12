@@ -3,14 +3,15 @@
 
 #include "Entity.h"
 
-namespace Abs{
-    class PlayerEntity: public Entity {
+namespace Abs {
+    /**
+     * The abstract playerEntity super class for PlayerShip and PlayerBullet
+     */
+    class PlayerEntity : public Entity {
     public:
         PlayerEntity(double, double, double, double);
 
         virtual ~PlayerEntity() = default;
-
-        virtual void visualize() = 0;
     };
 }
 
