@@ -436,24 +436,23 @@ void Game::enemyBulletHandler() {
             //Remove them if they've gone too far
             delete bullet;
             enemyBullets.erase(enemyBullets.begin() + (i--));
-            return;
         } else {
             //Move the bullet
             bullet->move(0, NORMALISED_BULLET_SPEED);
-        }
 
-        //Test collision with playership
-        if (isCollision(bullet, playerShip)) {  //If hit
-            //Life lost
-            lives--;
-            //Sound
-            gameFactory->playSound(HIT);
-            //Remove bullet
-            delete bullet;
-            enemyBullets.erase(enemyBullets.begin() + (i--));
-        } else { //If no hit
-            //Show the bullet
-            bullet->visualize();
+            //Test collision with playership
+            if (isCollision(bullet, playerShip)) {  //If hit
+                //Life lost
+                lives--;
+                //Sound
+                gameFactory->playSound(HIT);
+                //Remove bullet
+                delete bullet;
+                enemyBullets.erase(enemyBullets.begin() + (i--));
+            } else { //If no hit
+                //Show the bullet
+                bullet->visualize();
+            }
         }
     }
 }
@@ -482,10 +481,12 @@ void Game::bonusEntityHandler() {
             if (rand() % 100 <= BONUS_SPAWN_RATE) { //A chance to spawn a bonusentity
                 if (rand() % 100 <= 50) { //50/50 chance
                     //Spawn posbonus
-                    bonusEntity = gameFactory->createBonusEntity(POSBONUS, -BONUS_WIDTH / 2, 0.09, BONUS_WIDTH, BONUS_HEIGHT);
+                    bonusEntity = gameFactory->createBonusEntity(POSBONUS, -BONUS_WIDTH / 2, 0.09, BONUS_WIDTH,
+                                                                 BONUS_HEIGHT);
                 } else {
                     //Spawn negbonus
-                    bonusEntity = gameFactory->createBonusEntity(NEGBONUS, -BONUS_WIDTH / 2, 0.09, BONUS_WIDTH, BONUS_HEIGHT);
+                    bonusEntity = gameFactory->createBonusEntity(NEGBONUS, -BONUS_WIDTH / 2, 0.09, BONUS_WIDTH,
+                                                                 BONUS_HEIGHT);
                 }
                 bonusEntity->visualize();
             }
