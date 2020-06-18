@@ -8,14 +8,14 @@
 class ConfigLoader {
 private:
     tinyxml2::XMLDocument doc;
-    std::map<std::string, double> parsedMap;
+    std::map<std::string, std::string> parsedMap;
 
     void parse(tinyxml2::XMLNode*, const std::string &, bool);
 
 public:
-    ConfigLoader(const std::string&);
+    ConfigLoader(const std::string &);
 
-    std::map<std::string, double> load();
+    std::map<std::string, std::string> load();
 };
 
 #endif

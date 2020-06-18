@@ -9,7 +9,11 @@
  * @param w The relative width
  * @param h The relative height
  */
-Sdl::SDLEnemyShip::SDLEnemyShip(Sdl::SDLWindow* window, double x, double y, double w, double h, ENTITY e) : EnemyShip(x, y, w, h, e){
+Sdl::SDLEnemyShip::SDLEnemyShip(Sdl::SDLWindow* window, double x, double y, double w, double h, ENTITY e) : EnemyShip(x,
+                                                                                                                      y,
+                                                                                                                      w,
+                                                                                                                      h,
+                                                                                                                      e) {
     this->window = window;
 }
 

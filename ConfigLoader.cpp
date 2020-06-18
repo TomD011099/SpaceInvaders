@@ -4,7 +4,7 @@ ConfigLoader::ConfigLoader(const std::string &path) {
     doc.LoadFile(path.c_str());
 }
 
-std::map<std::string, double> ConfigLoader::load() {
+std::map<std::string, std::string> ConfigLoader::load() {
     parse(doc.FirstChildElement("Settings"), "", true);
 
     return parsedMap;
@@ -15,8 +15,7 @@ void ConfigLoader::parse(tinyxml2::XMLNode* root, const std::string &path, bool 
 
     if (e->FirstChild()->NoChildren()) {
         std::string val(e->GetText());
-        double valD = std::stod(val);
-        parsedMap.insert(std::pair<std::string, double>(path, valD));
+        parsedMap.insert(std::pair<std::string, std::string>(path, val));
     } else {
         for (tinyxml2::XMLNode* node = root->FirstChildElement(); node; node = node->NextSibling()) {
             if (first) {

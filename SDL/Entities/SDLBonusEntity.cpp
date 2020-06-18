@@ -10,7 +10,7 @@
  * @param h The relative height
  */
 Sdl::SDLBonusEntity::SDLBonusEntity(Sdl::SDLWindow* window, ENTITY e, double x, double y, double w, double h)
-    : Abs::BonusEntity(e, x, y, w, h) {
+        : Abs::BonusEntity(e, x, y, w, h) {
     this->window = window;
 }
 

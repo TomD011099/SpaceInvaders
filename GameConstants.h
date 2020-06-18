@@ -22,31 +22,31 @@ const double ENEMY_SPEED = 0.04;    //[Relative distance per second]
 const double BONUS_SPEED = 0.005;   //[Relative distance per second]
 
 //Size
-    //Playership
-    const double PLAYERSHIP_WIDTH = 0.05;   //[Relative size]
-    const double PLAYERSHIP_HEIGHT = 0.05;  //[Relative size]
+//Playership
+const double PLAYERSHIP_WIDTH = 0.05;   //[Relative size]
+const double PLAYERSHIP_HEIGHT = 0.05;  //[Relative size]
 
-    //Enemyship
-    const double ENEMYSHIP_WIDHT = 0.05;    //[Relative size]
-    const double ENEMYSHIP_HEIGHT = 0.04;   //[Relative size]
+//Enemyship
+const double ENEMYSHIP_WIDHT = 0.05;    //[Relative size]
+const double ENEMYSHIP_HEIGHT = 0.04;   //[Relative size]
 
-    //Bullets
-    const double BULLET_WIDTH = 0.005;      //[Relative size]
-    const double BULLET_HEIGHT = 0.03;      //[Relative size]
+//Bullets
+const double BULLET_WIDTH = 0.005;      //[Relative size]
+const double BULLET_HEIGHT = 0.03;      //[Relative size]
 
-    //Bonusentity
-    const double BONUS_WIDTH = 0.1;         //[Relative size]
-    const double BONUS_HEIGHT = 0.05;       //[Relative size]
+//Bonusentity
+const double BONUS_WIDTH = 0.1;         //[Relative size]
+const double BONUS_HEIGHT = 0.05;       //[Relative size]
 
 //Cooldowns & delays
-    //Enemy
-    const double ENEMY_COOLDOWN = 0.35;         //[seconds]
-    const double ENEMY_MOVEMENT_DELAY = 1;      //[seconds]
-    const double ENEMY_DEATH_TIME = 0.5;        //[seconds]
+//Enemy
+const double ENEMY_COOLDOWN = 0.35;         //[seconds]
+const double ENEMY_MOVEMENT_DELAY = 1;      //[seconds]
+const double ENEMY_DEATH_TIME = 0.5;        //[seconds]
 
-    //Bonusentity
-    const int BONUS_SPAWN_RATE = 5;             //[% chance evey BONUS_SPWAN_COOLDOWN seconds]
-    const double BONUS_SPAWN_COOLDOWN = 0.25;   //[seconds]
+//Bonusentity
+const int BONUS_SPAWN_RATE = 5;             //[% chance evey BONUS_SPWAN_COOLDOWN seconds]
+const double BONUS_SPAWN_COOLDOWN = 0.25;   //[seconds]
 
 //Game over when enemy crosses bound
 const double ENEMY_LOWER_BOUND = 0.9;
@@ -82,8 +82,8 @@ const std::map<ENTITY, int> scores = {
         {ENEMYSHIP2, 60},
         {ENEMYSHIP3, 40},
         {ENEMYSHIP4, 20},
-        {POSBONUS, 200},
-        {NEGBONUS, -200}
+        {POSBONUS,   200},
+        {NEGBONUS,   -200}
 };
 
 //Calculations
