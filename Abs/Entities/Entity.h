@@ -1,7 +1,7 @@
 #ifndef SPACEINVADERS_ENTITY_H
 #define SPACEINVADERS_ENTITY_H
 
-#include "../../GameConstants.h"
+#include "../../Const/GameConstants.h"
 
 namespace Abs {
     /**

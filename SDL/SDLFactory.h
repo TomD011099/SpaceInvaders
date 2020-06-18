@@ -2,7 +2,7 @@
 #define SPACEINVADERS_SDLFACTORY_H
 
 #include <iostream>
-#include "../GameConstants.h"
+#include "../Const/GameConstants.h"
 #include "../Abs/Factory.h"
 #include "Window/SDLWindow.h"
 #include "Entities/SDLPlayerShip.h"

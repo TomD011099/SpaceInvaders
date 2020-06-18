@@ -1,8 +1,13 @@
-#include <iostream>
 #include "Game.h"
 #include "SDL/SDLFactory.h"
+#include "Util/ConfigLoader.h"
+#include <map>
 
 int main(int argc, char* argv[]) { //argc and argv aren't used, but necessary for SDL
+    ConfigLoader* c = new ConfigLoader("../config.xml");
+    std::map<std::string, std::string> settingsMap = c->load();
+    GameConstants::initInstance(settingsMap);
+
     //Create an SDLFactory, disguised as an Abs::Factory
     Abs::Factory* factory = new Sdl::SDLFactory();
 

@@ -8,7 +8,7 @@ namespace Sdl {
     /**
      * An implementation of Abs::BonusEntity
      */
-    class SDLBonusEntity: public Abs::BonusEntity {
+    class SDLBonusEntity : public Abs::BonusEntity {
     public:
         SDLBonusEntity(SDLWindow*, ENTITY, double, double, double, double);
 

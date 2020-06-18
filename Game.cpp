@@ -11,8 +11,10 @@ Game* Game::instance = nullptr;
  * @param absFactory An implementation of an abstract factory, this will define the engine
  */
 Game::Game(Abs::Factory* absFactory) {
+    gameConstants = GameConstants::getInstance();
+
     gameFactory = absFactory;
-    lives = MAX_LIVES;
+    lives = gameConstants->getMaxLives();
     score = 0;
     isQuit = false;
     isGameOver = false;
@@ -137,7 +139,7 @@ void Game::run() {
         gameFactory->draw(score, lives, showEndScore);
 
         //Hold until frametime is reached
-        std::this_thread::sleep_until(start + SCREEN_TIME);
+        std::this_thread::sleep_until(start + gameConstants->getScreenTime());
     }
 }
 
@@ -146,7 +148,8 @@ void Game::run() {
  */
 void Game::setup() {
     controller = gameFactory->createController();
-    playerShip = gameFactory->createPlayerShip(0.5, 0.9, PLAYERSHIP_WIDTH, PLAYERSHIP_HEIGHT);
+    playerShip = gameFactory->createPlayerShip(0.5, 0.9, gameConstants->getPlayerWidth(),
+                                               gameConstants->getPlayerHeight());
     generateEnemies();
 }
 
@@ -156,7 +159,7 @@ void Game::setup() {
  */
 void Game::generateEnemies() {
     //Start value for x = left border
-    double x = ENEMYSHIP_WIDHT / 2, y;
+    double x = gameConstants->getEnemyWidth() / 2, y;
     ENTITY e = ENEMYSHIP0;
 
     for (int i = 0; i < 11; i++) {
@@ -166,7 +169,7 @@ void Game::generateEnemies() {
 
         for (int j = 0; j < 5; j++) {
             //Vertical distance between the enemies
-            y += (ENEMYSHIP_HEIGHT + 0.015);
+            y += (gameConstants->getEnemyHeight() + 0.015);
 
             switch (j) {
                 case 0:
@@ -188,11 +191,13 @@ void Game::generateEnemies() {
                     break;
             }
             //A new enemy is created with the calculated x and y values and of a specific type
-            column.push_back(gameFactory->createEnemyShip(x, y, ENEMYSHIP_WIDHT, ENEMYSHIP_HEIGHT, e));
+            column.push_back(
+                    gameFactory->createEnemyShip(x, y, gameConstants->getEnemyWidth(), gameConstants->getEnemyHeight(),
+                                                 e));
         }
         enemies.push_back(column);
         //Horizontal distance between the enemies
-        x += (ENEMYSHIP_WIDHT + 0.015);
+        x += (gameConstants->getEnemyWidth() + 0.015);
     }
 }
 
@@ -206,17 +211,18 @@ void Game::playerShipHandler() {
         switch (event) {
             case CTRL_LEFT:
                 //Move left
-                playerShip->move(-NORMALISED_SPEED, 0);
+                playerShip->move(-gameConstants->getNormPlayerSpeed(), 0);
                 break;
             case CTRL_RIGHT:
                 //Move right
-                playerShip->move(NORMALISED_SPEED, 0);
+                playerShip->move(gameConstants->getNormPlayerSpeed(), 0);
                 break;
             case CTRL_SHOOT:
                 //The bullet is created at the position of the player
                 if (playerBullet == nullptr) {
                     playerBullet = gameFactory->createPlayerBullet(playerShip->getXPos(), playerShip->getYPos(),
-                                                                   BULLET_WIDTH, BULLET_HEIGHT);
+                                                                   gameConstants->getBulletWidth(),
+                                                                   gameConstants->getBulletHeight());
                 }
                 break;
             default:
@@ -242,7 +248,7 @@ void Game::playerBulletHandler() {
             return;
         } else {                            //If the bullet hasn't passed the edge yet
             //Move the bullet
-            playerBullet->move(0, -NORMALISED_BULLET_SPEED);
+            playerBullet->move(0, -gameConstants->getNormBulletSpeed());
         }
 
         //Collision detection
@@ -253,7 +259,7 @@ void Game::playerBulletHandler() {
                 Abs::EnemyShip* enemyShip = enemies[i].at(j);
                 if (isCollision(playerBullet, enemyShip) && enemyShip->isAlive()) { //If there is collision
                     //Add the score
-                    score += scores.at(enemyShip->getType());
+                    score += gameConstants->getScores().at(enemyShip->getType());
                     //Let the enemy know it's hit -> sound + visual response
                     enemyShip->hit();
                     //Delete the bullet so a new one can be shot
@@ -267,7 +273,7 @@ void Game::playerBulletHandler() {
         if (bonusEntity != nullptr && !hit) {   //If the bonusEntity is on the screen and there wasn't a hit yet
             if (isCollision(playerBullet, bonusEntity)) {   //If there is collision
                 //Add the score
-                score += scores.at(bonusEntity->getEntity());
+                score += gameConstants->getScores().at(bonusEntity->getEntity());
                 //Delete the bullet so a new one can be shot
                 delete playerBullet;
                 playerBullet = nullptr;
@@ -329,7 +335,7 @@ void Game::enemyShipHandler() {
 
     //Movement
     //On a cooldown
-    if (enemyMoveCooldownCounter >= NORMALIZED_ENEMY_MOVEMENT_DELAY) {  //If time to move
+    if (enemyMoveCooldownCounter >= gameConstants->getNormEnemyMoveDelay()) {  //If time to move
         //Reset counter
         enemyMoveCooldownCounter = 0;
 
@@ -341,25 +347,27 @@ void Game::enemyShipHandler() {
         //Calculate movement
         if (isEnemyMovingLeft) { //If moving left
             //If moving left won't keep the aliens on the screen
-            if (minX - ENEMY_SPEED <= ENEMYSHIP_WIDHT / 2 && isEnemyMovingHorizontal) {
+            if (minX - gameConstants->getEnemySpeed() <= gameConstants->getEnemyWidth() / 2 &&
+                isEnemyMovingHorizontal) {
                 //Move down
                 isEnemyMovingHorizontal = false;
                 //After that move right
                 isEnemyMovingLeft = false;
             } else {
                 //The aliens will move to the left
-                movement = -ENEMY_SPEED;
+                movement = -gameConstants->getEnemySpeed();
             }
         } else {    //If moving right or vertically
             //If moving right won't keep the aliens on the screen
-            if (maxX + ENEMY_SPEED >= (1 - ENEMYSHIP_WIDHT / 2) && isEnemyMovingHorizontal) {
+            if (maxX + gameConstants->getEnemySpeed() >= (1 - gameConstants->getEnemyWidth() / 2) &&
+                isEnemyMovingHorizontal) {
                 //Move down
                 isEnemyMovingHorizontal = false;
                 //After that move left
                 isEnemyMovingLeft = true;
             } else {
                 //The aliens will move to the right
-                movement = ENEMY_SPEED;
+                movement = gameConstants->getEnemySpeed();
             }
         }
 
@@ -371,7 +379,7 @@ void Game::enemyShipHandler() {
                 if (isEnemyMovingHorizontal) {
                     enemyShip->move(movement, 0);
                 } else {
-                    enemyShip->move(0, ENEMY_SPEED);
+                    enemyShip->move(0, gameConstants->getEnemySpeed());
                     double y = enemyShip->getYPos();
                     if (y > lowestY) {
                         lowestY = y;
@@ -387,7 +395,7 @@ void Game::enemyShipHandler() {
         }
 
         //See if the aliens have crossed the lower bound
-        if (lowestY >= ENEMY_LOWER_BOUND) {
+        if (lowestY >= gameConstants->getLowerBound()) {
             //Game over
             isGameOver = true;
         }
@@ -403,7 +411,7 @@ void Game::enemyShipHandler() {
     drawEnemyShip();
 
     //Shooting logic
-    if (enemyShootCooldownCounter >= NORMALIZED_ENEMY_COOLDOWN) { //If time to shoot
+    if (enemyShootCooldownCounter >= gameConstants->getNormEnemyShootCooldown()) { //If time to shoot
         //Reset counter
         enemyShootCooldownCounter = 0;
         //Choose random column
@@ -414,7 +422,9 @@ void Game::enemyShipHandler() {
             if (ship->isAlive()) {
                 //Create a bullet at the enemies location
                 enemyBullets.push_back(
-                        gameFactory->createEnemyBullet(ship->getXPos(), ship->getYPos(), BULLET_WIDTH, BULLET_HEIGHT));
+                        gameFactory->createEnemyBullet(ship->getXPos(), ship->getYPos(),
+                                                       gameConstants->getBulletWidth(),
+                                                       gameConstants->getBulletHeight()));
                 break;
             }
         }
@@ -438,7 +448,7 @@ void Game::enemyBulletHandler() {
             enemyBullets.erase(enemyBullets.begin() + (i--));
         } else {
             //Move the bullet
-            bullet->move(0, NORMALISED_BULLET_SPEED);
+            bullet->move(0, gameConstants->getNormBulletSpeed());
 
             //Test collision with playership
             if (isCollision(bullet, playerShip)) {  //If hit
@@ -471,22 +481,24 @@ void Game::bonusEntityHandler() {
             return;
         } else {    //If the bonusentity will stay between the bounds
             //Move the bonusentity
-            bonusEntity->move(BONUS_SPEED, 0);
+            bonusEntity->move(gameConstants->getBonusSpeed(), 0);
             bonusEntity->visualize();
         }
     } else {    //If the bonusentity doesn't exist yet
-        if (bonusSpawnCooldownCounter >= NORMALISED_BONUS_SPAWN_COOLDOWN) { //A delay between spawn attempts
+        if (bonusSpawnCooldownCounter >= gameConstants->getNormBonusSpawnCooldown()) { //A delay between spawn attempts
             //Reset counter
             bonusSpawnCooldownCounter = 0;
-            if (rand() % 100 <= BONUS_SPAWN_RATE) { //A chance to spawn a bonusentity
+            if (rand() % 100 <= gameConstants->getBonusSpawnRate()) { //A chance to spawn a bonusentity
                 if (rand() % 100 <= 50) { //50/50 chance
                     //Spawn posbonus
-                    bonusEntity = gameFactory->createBonusEntity(POSBONUS, -BONUS_WIDTH / 2, 0.09, BONUS_WIDTH,
-                                                                 BONUS_HEIGHT);
+                    bonusEntity = gameFactory->createBonusEntity(POSBONUS, -gameConstants->getBonusWidth() / 2, 0.09,
+                                                                 gameConstants->getBonusWidth(),
+                                                                 gameConstants->getBonusHeight());
                 } else {
                     //Spawn negbonus
-                    bonusEntity = gameFactory->createBonusEntity(NEGBONUS, -BONUS_WIDTH / 2, 0.09, BONUS_WIDTH,
-                                                                 BONUS_HEIGHT);
+                    bonusEntity = gameFactory->createBonusEntity(NEGBONUS, -gameConstants->getBonusWidth() / 2, 0.09,
+                                                                 gameConstants->getBonusWidth(),
+                                                                 gameConstants->getBonusHeight());
                 }
                 bonusEntity->visualize();
             }

@@ -3,11 +3,11 @@
 
 #include "PlayerEntity.h"
 
-namespace Abs{
+namespace Abs {
     /**
      * The abstract playership, implement this to use it for a specific engine
      */
-    class PlayerShip: public PlayerEntity {
+    class PlayerShip : public PlayerEntity {
     public:
         PlayerShip(double, double, double, double);
 
