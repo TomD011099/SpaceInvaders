@@ -338,32 +338,32 @@ Abs/Entities/PlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.s
 .PHONY : Abs/Entities/PlayerShip.cpp.s
 
-ConfigLoader.obj: ConfigLoader.cpp.obj
+Const/GameConstants.obj: Const/GameConstants.cpp.obj
 
-.PHONY : ConfigLoader.obj
+.PHONY : Const/GameConstants.obj
 
 # target to build an object file
-ConfigLoader.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.obj
-.PHONY : ConfigLoader.cpp.obj
+Const/GameConstants.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Const/GameConstants.cpp.obj
+.PHONY : Const/GameConstants.cpp.obj
 
-ConfigLoader.i: ConfigLoader.cpp.i
+Const/GameConstants.i: Const/GameConstants.cpp.i
 
-.PHONY : ConfigLoader.i
+.PHONY : Const/GameConstants.i
 
 # target to preprocess a source file
-ConfigLoader.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.i
-.PHONY : ConfigLoader.cpp.i
+Const/GameConstants.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Const/GameConstants.cpp.i
+.PHONY : Const/GameConstants.cpp.i
 
-ConfigLoader.s: ConfigLoader.cpp.s
+Const/GameConstants.s: Const/GameConstants.cpp.s
 
-.PHONY : ConfigLoader.s
+.PHONY : Const/GameConstants.s
 
 # target to generate assembly for a file
-ConfigLoader.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.s
-.PHONY : ConfigLoader.cpp.s
+Const/GameConstants.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Const/GameConstants.cpp.s
+.PHONY : Const/GameConstants.cpp.s
 
 Game.obj: Game.cpp.obj
 
@@ -635,6 +635,33 @@ SDL/Window/SDLWindow.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.s
 .PHONY : SDL/Window/SDLWindow.cpp.s
 
+Util/ConfigLoader.obj: Util/ConfigLoader.cpp.obj
+
+.PHONY : Util/ConfigLoader.obj
+
+# target to build an object file
+Util/ConfigLoader.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Util/ConfigLoader.cpp.obj
+.PHONY : Util/ConfigLoader.cpp.obj
+
+Util/ConfigLoader.i: Util/ConfigLoader.cpp.i
+
+.PHONY : Util/ConfigLoader.i
+
+# target to preprocess a source file
+Util/ConfigLoader.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Util/ConfigLoader.cpp.i
+.PHONY : Util/ConfigLoader.cpp.i
+
+Util/ConfigLoader.s: Util/ConfigLoader.cpp.s
+
+.PHONY : Util/ConfigLoader.s
+
+# target to generate assembly for a file
+Util/ConfigLoader.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Util/ConfigLoader.cpp.s
+.PHONY : Util/ConfigLoader.cpp.s
+
 Util/tinyxml2.obj: Util/tinyxml2.cpp.obj
 
 .PHONY : Util/tinyxml2.obj
@@ -722,9 +749,9 @@ help:
 	@echo ... Abs/Entities/PlayerShip.obj
 	@echo ... Abs/Entities/PlayerShip.i
 	@echo ... Abs/Entities/PlayerShip.s
-	@echo ... ConfigLoader.obj
-	@echo ... ConfigLoader.i
-	@echo ... ConfigLoader.s
+	@echo ... Const/GameConstants.obj
+	@echo ... Const/GameConstants.i
+	@echo ... Const/GameConstants.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
@@ -755,6 +782,9 @@ help:
 	@echo ... SDL/Window/SDLWindow.obj
 	@echo ... SDL/Window/SDLWindow.i
 	@echo ... SDL/Window/SDLWindow.s
+	@echo ... Util/ConfigLoader.obj
+	@echo ... Util/ConfigLoader.i
+	@echo ... Util/ConfigLoader.s
 	@echo ... Util/tinyxml2.obj
 	@echo ... Util/tinyxml2.i
 	@echo ... Util/tinyxml2.s

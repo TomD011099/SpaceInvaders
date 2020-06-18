@@ -1,7 +1,7 @@
 #ifndef SPACEINVADERS_CONFIGLOADER_H
 #define SPACEINVADERS_CONFIGLOADER_H
 
-#include "Util/tinyxml2.h"
+#include "tinyxml2.h"
 #include <iostream>
 #include <map>
 

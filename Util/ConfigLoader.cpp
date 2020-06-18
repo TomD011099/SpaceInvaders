@@ -15,7 +15,7 @@ void ConfigLoader::parse(tinyxml2::XMLNode* root, const std::string &path, bool 
 
     if (e->FirstChild()->NoChildren()) {
         std::string val(e->GetText());
-        parsedMap.insert(std::pair<std::string, std::string>(path, val));
+        parsedMap[path] = val;
     } else {
         for (tinyxml2::XMLNode* node = root->FirstChildElement(); node; node = node->NextSibling()) {
             if (first) {

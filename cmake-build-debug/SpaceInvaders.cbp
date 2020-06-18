@@ -136,19 +136,19 @@
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Factory.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/ConfigLoader.cpp">
+		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Const/Enums.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/ConfigLoader.h">
+		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Const/GameConstants.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Const/GameConstants.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Game.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Game.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/GameConstants.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLBonusEntity.cpp">
@@ -203,6 +203,12 @@
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/SDLWindow.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Util/ConfigLoader.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Util/ConfigLoader.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Util/tinyxml2.cpp">

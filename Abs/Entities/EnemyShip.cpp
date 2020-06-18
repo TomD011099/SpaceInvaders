@@ -12,6 +12,7 @@ Abs::EnemyShip::EnemyShip(double x, double y, double w, double h, ENTITY e) : En
     type = e;
     alive = true;
     gone = false;
+    deathTime = 0;
 }
 
 /**
@@ -46,7 +47,7 @@ bool Abs::EnemyShip::isGone() {
  */
 void Abs::EnemyShip::tick() {
     deathTime++;
-    gone = (deathTime == NORMALISED_ENEMY_DEATH_TIME);
+    gone = (deathTime == GameConstants::getInstance()->getNormEnemyDeath());
 }
 
 /**

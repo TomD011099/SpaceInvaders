@@ -9,10 +9,12 @@ find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
 add_executable(SpaceInvaders main.cpp
-        GameConstants.h
-        Game.cpp                    Game.h
-        ConfigLoader.cpp            ConfigLoader.h
+        Game.cpp        Game.h
 
+        Const/Enums.h
+        Const/GameConstants.cpp     Const/GameConstants.h
+
+        Util/ConfigLoader.cpp       Util/ConfigLoader.h
         Util/tinyxml2.cpp           Util/tinyxml2.h
 
         Abs/Factory.h
@@ -24,18 +26,18 @@ add_executable(SpaceInvaders main.cpp
         SDL/Window/SDLWindow.cpp    SDL/Window/SDLWindow.h
         SDL/Window/LTexture.cpp     SDL/Window/LTexture.h
 
-        Abs/Entities/Entity.cpp             Abs/Entities/Entity.h
-            Abs/Entities/PlayerEntity.cpp       Abs/Entities/PlayerEntity.h
-                Abs/Entities/PlayerShip.cpp         Abs/Entities/PlayerShip.h
-                SDL/Entities/SDLPlayerShip.cpp      SDL/Entities/SDLPlayerShip.h
-                Abs/Entities/PlayerBullet.cpp       Abs/Entities/PlayerBullet.h
-                SDL/Entities/SDLPlayerBullet.cpp    SDL/Entities/SDLPlayerBullet.h
-            Abs/Entities/EnemyEntity.cpp        Abs/Entities/EnemyEntity.h
-                Abs/Entities/EnemyShip.cpp          Abs/Entities/EnemyShip.h
-                SDL/Entities/SDLEnemyShip.cpp       SDL/Entities/SDLEnemyShip.h
-                Abs/Entities/EnemyBullet.cpp        Abs/Entities/EnemyBullet.h
-                SDL/Entities/SDLEnemyBullet.cpp     SDL/Entities/SDLEnemyBullet.h
-            Abs/Entities/BonusEntity.cpp        Abs/Entities/BonusEntity.h
-            SDL/Entities/SDLBonusEntity.cpp     SDL/Entities/SDLBonusEntity.h)
+        Abs/Entities/Entity.cpp                     Abs/Entities/Entity.h
+            Abs/Entities/PlayerEntity.cpp               Abs/Entities/PlayerEntity.h
+                Abs/Entities/PlayerShip.cpp                 Abs/Entities/PlayerShip.h
+                    SDL/Entities/SDLPlayerShip.cpp              SDL/Entities/SDLPlayerShip.h
+                Abs/Entities/PlayerBullet.cpp               Abs/Entities/PlayerBullet.h
+                    SDL/Entities/SDLPlayerBullet.cpp            SDL/Entities/SDLPlayerBullet.h
+            Abs/Entities/EnemyEntity.cpp                Abs/Entities/EnemyEntity.h
+                Abs/Entities/EnemyShip.cpp                  Abs/Entities/EnemyShip.h
+                    SDL/Entities/SDLEnemyShip.cpp               SDL/Entities/SDLEnemyShip.h
+                Abs/Entities/EnemyBullet.cpp                Abs/Entities/EnemyBullet.h
+                    SDL/Entities/SDLEnemyBullet.cpp             SDL/Entities/SDLEnemyBullet.h
+            Abs/Entities/BonusEntity.cpp                Abs/Entities/BonusEntity.h
+                SDL/Entities/SDLBonusEntity.cpp             SDL/Entities/SDLBonusEntity.h)
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)

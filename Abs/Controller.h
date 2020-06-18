@@ -1,7 +1,7 @@
 #ifndef SPACEINVADERS_CONTROLLER_H
 #define SPACEINVADERS_CONTROLLER_H
 
-#include "../GameConstants.h"
+#include "../Const/GameConstants.h"
 #include <vector>
 
 namespace Abs {

@@ -2,7 +2,7 @@
 #define SPACEINVADERS_SDLWINDOW_H
 
 #include "LTexture.h"
-#include "../../GameConstants.h"
+#include "../../Const/GameConstants.h"
 #include <SDL_ttf.h>
 #include <SDL_mixer.h>
 #include <map>
@@ -41,6 +41,8 @@ namespace Sdl {
         ~SDLWindow();
 
         static SDLWindow* instance;     //The Window instance
+
+        GameConstants* gameConstants;
 
         SDL_Window* window;             //The window we'll render to
         SDL_Renderer* renderer;         //The use of a renderer means we can use the GPU for our display

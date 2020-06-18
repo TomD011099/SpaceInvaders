@@ -32,6 +32,7 @@ Sdl::SDLWindow::SDLWindow() {
     window = nullptr;
     renderer = nullptr;
     font = nullptr;
+    gameConstants = GameConstants::getInstance();
 }
 
 /**
@@ -88,8 +89,9 @@ bool Sdl::SDLWindow::init() {
     }
 
     //Create window
-    window = SDL_CreateWindow("SpaceInvaders", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
-                              SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    window = SDL_CreateWindow("SpaceInvaders", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+                              gameConstants->getScreenWidth(),
+                              gameConstants->getScreenHeight(), SDL_WINDOW_SHOWN);
     if (window == nullptr) {
         std::cout << "Window could not be created! SDL Error: " << SDL_GetError() << "\n";
         success = false;
@@ -302,10 +304,10 @@ void Sdl::SDLWindow::printScore(int points) {
     }
 
     //Change to SDL coordinates
-    double scoreW = 0.1 * SCREEN_WIDTH;
-    double scoreH = 0.02 * SCREEN_HEIGHT;
-    double scoreX = (0.5 * SCREEN_WIDTH) - scoreW / 2;
-    double scoreY = (0.02 * SCREEN_HEIGHT) - scoreH / 2;
+    double scoreW = 0.1 * gameConstants->getScreenWidth();
+    double scoreH = 0.02 * gameConstants->getScreenHeight();
+    double scoreX = (0.5 * gameConstants->getScreenWidth()) - scoreW / 2;
+    double scoreY = (0.02 * gameConstants->getScreenHeight()) - scoreH / 2;
 
     //Render the score
     score.render(static_cast<int>(scoreX), static_cast<int>(scoreY), static_cast<int>(scoreW), static_cast<int>(scoreH),
@@ -324,10 +326,10 @@ void Sdl::SDLWindow::printScoreEnd(int points) {
     }
 
     //Change to SDL coordinates
-    double scoreW = 0.5 * SCREEN_WIDTH;
-    double scoreH = 0.2 * SCREEN_HEIGHT;
-    double scoreX = (0.5 * SCREEN_WIDTH) - scoreW / 2;
-    double scoreY = (0.5 * SCREEN_HEIGHT) - scoreH / 2;
+    double scoreW = 0.5 * gameConstants->getScreenWidth();
+    double scoreH = 0.2 * gameConstants->getScreenHeight();
+    double scoreX = (0.5 * gameConstants->getScreenWidth()) - scoreW / 2;
+    double scoreY = (0.5 * gameConstants->getScreenHeight()) - scoreH / 2;
 
     //Render the score
     endScore.render(static_cast<int>(scoreX), static_cast<int>(scoreY), static_cast<int>(scoreW),
@@ -348,20 +350,20 @@ void Sdl::SDLWindow::printLives(int lifeCount) {
     }
 
     //Change to SDL coordinates
-    double livesW = 0.03 * SCREEN_WIDTH;
-    double livesH = 0.03 * SCREEN_HEIGHT;
-    double livesX = (0.93 * SCREEN_WIDTH) - livesW / 2;
-    double livesY = (0.03 * SCREEN_HEIGHT) - livesH / 2;
+    double livesW = 0.03 * gameConstants->getScreenWidth();
+    double livesH = 0.03 * gameConstants->getScreenHeight();
+    double livesX = (0.93 * gameConstants->getScreenWidth()) - livesW / 2;
+    double livesY = (0.03 * gameConstants->getScreenHeight()) - livesH / 2;
 
     //Render the lives
     lives.render(static_cast<int>(livesX), static_cast<int>(livesY), static_cast<int>(livesW), static_cast<int>(livesH),
                  nullptr, renderer);
 
     //Change to SDL coordinates
-    double livesIconW = 0.03 * SCREEN_WIDTH;
-    double livesIconH = 0.03 * SCREEN_HEIGHT;
-    double livesIconX = (0.97 * SCREEN_WIDTH) - livesIconW / 2;
-    double livesIconY = (0.03 * SCREEN_HEIGHT) - livesIconH / 2;
+    double livesIconW = 0.03 * gameConstants->getScreenWidth();
+    double livesIconH = 0.03 * gameConstants->getScreenHeight();
+    double livesIconX = (0.97 * gameConstants->getScreenWidth()) - livesIconW / 2;
+    double livesIconY = (0.03 * gameConstants->getScreenHeight()) - livesIconH / 2;
 
     //Render the playericon
     spriteSheetTexture.render(static_cast<int>(livesIconX), static_cast<int>(livesIconY), static_cast<int>(livesIconW),
@@ -390,10 +392,10 @@ void Sdl::SDLWindow::render(double x, double y, double w, double h, ENTITY type)
     double SDLx, SDLy, SDLw, SDLh;
 
     //Change to SDL coordinates
-    SDLw = w * SCREEN_WIDTH;
-    SDLh = h * SCREEN_HEIGHT;
-    SDLx = (x * SCREEN_WIDTH) - SDLw / 2;
-    SDLy = (y * SCREEN_HEIGHT) - SDLh / 2;
+    SDLw = w * gameConstants->getScreenWidth();
+    SDLh = h * gameConstants->getScreenHeight();
+    SDLx = (x * gameConstants->getScreenWidth()) - SDLw / 2;
+    SDLy = (y * gameConstants->getScreenHeight()) - SDLh / 2;
 
     //Render the sprite
     spriteSheetTexture.render(static_cast<int>(SDLx), static_cast<int>(SDLy), static_cast<int>(SDLw),

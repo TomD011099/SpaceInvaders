@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Settings>
     <Screen>
-        <Width>1000</Width>
-        <Height>700</Height>
-        <FPS>60</FPS>
+        <Width>default</Width>
+        <Height>default</Height>
+        <FPS>default</FPS>
     </Screen>
+    <Lives>default</Lives>
     <Speed>
-        <Player>0.5</Player>
-        <Bullet>0.8</Bullet>
-        <Enemy>0.04</Enemy>
-        <Bonus>0.005</Bonus>
+        <Player>default</Player>
+        <Bullet>default</Bullet>
+        <Enemy>default</Enemy>
+        <Bonus>default</Bonus>
     </Speed>
-    <Test>99</Test>
+    <Size>
+        <Player>
+            <Width>default</Width>
+            <Height>default</Height>
+        </Player>
+        <Enemy>
+            <Width>default</Width>
+            <Height>default</Height>
+        </Enemy>
+        <Bullets>
+            <Width>default</Width>
+            <Height>default</Height>
+        </Bullets>
+        <Bonus>
+            <Width>default</Width>
+            <Height>default</Height>
+        </Bonus>
+    </Size>
+    <Cooldown>
+        <Enemy>
+            <Shooting>default</Shooting>
+            <Movement>default</Movement>
+            <Death>default</Death>
+        </Enemy>
+        <Bonus>
+            <SpawnRate>default</SpawnRate>
+            <SpawnCooldown>default</SpawnCooldown>
+        </Bonus>
+    </Cooldown>
+    <LowerBound>default</LowerBound>
+    <Scores>
+        <E0>default</E0>
+        <E1>default</E1>
+        <E2>default</E2>
+        <E3>default</E3>
+        <E4>default</E4>
+        <Pos>default</Pos>
+        <Neg>default</Neg>
+    </Scores>
 </Settings>

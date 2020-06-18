@@ -7,6 +7,8 @@
 #include <iostream>
 #include <random>
 #include "Abs/Factory.h"
+#include "Const/Enums.h"
+#include "Const/GameConstants.h"
 
 class Game {
 public:
@@ -22,6 +24,8 @@ private:
     ~Game();
 
     static Game* instance;          //The game-instance
+
+    GameConstants* gameConstants;
 
     Abs::Factory* gameFactory;      //An implementation of an Abs::Factory
     int lives, score, enemyShootCooldownCounter, enemyMoveCooldownCounter, bonusSpawnCooldownCounter;
