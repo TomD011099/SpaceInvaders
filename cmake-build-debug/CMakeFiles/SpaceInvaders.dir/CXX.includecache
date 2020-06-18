@@ -650,65 +650,33 @@ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/
 vector
 -
 
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/BonusEntity.cpp
-BonusEntity.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/BonusEntity.h
-
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/BonusEntity.h
 Entity.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/Entity.h
-
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyBullet.cpp
-EnemyBullet.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyBullet.h
 
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyBullet.h
 EnemyEntity.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyEntity.h
 
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyEntity.cpp
-EnemyEntity.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyEntity.h
-
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyEntity.h
 Entity.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/Entity.h
 
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyShip.cpp
-EnemyShip.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyShip.h
-
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyShip.h
 EnemyEntity.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyEntity.h
-
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/Entity.cpp
-Entity.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/Entity.h
 
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/Entity.h
 ../../GameConstants.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/GameConstants.h
 
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerBullet.cpp
-PlayerBullet.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerBullet.h
-
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerBullet.h
-PlayerEntity.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerEntity.h
-
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerEntity.cpp
 PlayerEntity.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerEntity.h
 
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerEntity.h
 Entity.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/Entity.h
-
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerShip.cpp
-PlayerShip.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerShip.h
 
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerShip.h
 PlayerEntity.h
@@ -728,9 +696,17 @@ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/
 Controller.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Controller.h
 
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Game.cpp
-Game.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Game.h
+C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/ConfigLoader.cpp
+ConfigLoader.h
+C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/ConfigLoader.h
+
+C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/ConfigLoader.h
+Util/tinyxml2.h
+C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Util/tinyxml2.h
+iostream
+-
+map
+-
 
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Game.h
 list
@@ -752,19 +728,11 @@ chrono
 map
 -
 
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLBonusEntity.cpp
-SDLBonusEntity.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLBonusEntity.h
-
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLBonusEntity.h
 ../../Abs/Entities/BonusEntity.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/BonusEntity.h
 ../Window/SDLWindow.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/SDLWindow.h
-
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLEnemyBullet.cpp
-SDLEnemyBullet.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLEnemyBullet.h
 
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLEnemyBullet.h
 ../../Abs/Entities/EnemyBullet.h
@@ -772,29 +740,17 @@ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/
 ../Window/SDLWindow.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/SDLWindow.h
 
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLEnemyShip.cpp
-SDLEnemyShip.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLEnemyShip.h
-
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLEnemyShip.h
 ../../Abs/Entities/EnemyShip.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/EnemyShip.h
 ../Window/SDLWindow.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/SDLWindow.h
 
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPlayerBullet.cpp
-SDLPlayerBullet.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPlayerBullet.h
-
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPlayerBullet.h
 ../../Abs/Entities/PlayerBullet.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerBullet.h
 ../Window/SDLWindow.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/SDLWindow.h
-
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPlayerShip.cpp
-SDLPlayerShip.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPlayerShip.h
 
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLPlayerShip.h
 ../../Abs/Entities/PlayerShip.h
@@ -809,10 +765,6 @@ SDL2/SDL.h
 -
 iostream
 -
-
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/SDLFactory.cpp
-SDLFactory.h
-C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/SDLFactory.h
 
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/SDLFactory.h
 iostream
@@ -860,6 +812,36 @@ SDL_mixer.h
 map
 -
 
+C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Util/tinyxml2.h
+ctype.h
+-
+limits.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stddef.h
+-
+cctype
+-
+climits
+-
+cstdio
+-
+cstdlib
+-
+cstring
+-
+stdint.h
+-
+android/log.h
+-
+assert.h
+-
+
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/main.cpp
 iostream
 -
@@ -867,4 +849,6 @@ Game.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Game.h
 SDL/SDLFactory.h
 C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/SDLFactory.h
+ConfigLoader.h
+C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/ConfigLoader.h
 

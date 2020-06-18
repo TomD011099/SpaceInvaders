@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Settings>
+    <Screen>
+        <Width>1000</Width>
+        <Height>700</Height>
+        <FPS>60</FPS>
+    </Screen>
+    <Speed>
+        <Player>0.5</Player>
+        <Bullet>0.8</Bullet>
+        <Enemy>0.04</Enemy>
+        <Bonus>0.005</Bonus>
+    </Speed>
+    <Test>99</Test>
+</Settings>

@@ -11,6 +11,9 @@ include_directories(${SDL2_INCLUDE_DIR})
 add_executable(SpaceInvaders main.cpp
         GameConstants.h
         Game.cpp                    Game.h
+        ConfigLoader.cpp            ConfigLoader.h
+
+        Util/tinyxml2.cpp           Util/tinyxml2.h
 
         Abs/Factory.h
         SDL/SDLFactory.cpp          SDL/SDLFactory.h
@@ -33,7 +36,6 @@ add_executable(SpaceInvaders main.cpp
                 Abs/Entities/EnemyBullet.cpp        Abs/Entities/EnemyBullet.h
                 SDL/Entities/SDLEnemyBullet.cpp     SDL/Entities/SDLEnemyBullet.h
             Abs/Entities/BonusEntity.cpp        Abs/Entities/BonusEntity.h
-            SDL/Entities/SDLBonusEntity.cpp     SDL/Entities/SDLBonusEntity.h
-        )
+            SDL/Entities/SDLBonusEntity.cpp     SDL/Entities/SDLBonusEntity.h)
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)

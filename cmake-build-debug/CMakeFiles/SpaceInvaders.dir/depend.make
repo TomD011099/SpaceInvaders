@@ -44,6 +44,10 @@ CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj: ../Abs/Entities/Pl
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj: ../Abs/Entities/PlayerShip.h
 CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj: ../GameConstants.h
 
+CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.obj: ../ConfigLoader.cpp
+CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.obj: ../ConfigLoader.h
+CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.obj: ../Util/tinyxml2.h
+
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Abs/Controller.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Abs/Entities/BonusEntity.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Abs/Entities/EnemyBullet.h
@@ -520,6 +524,9 @@ CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: ../SDL/Window/LTextur
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: ../SDL/Window/SDLWindow.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj: ../SDL/Window/SDLWindow.h
 
+CMakeFiles/SpaceInvaders.dir/Util/tinyxml2.cpp.obj: ../Util/tinyxml2.cpp
+CMakeFiles/SpaceInvaders.dir/Util/tinyxml2.cpp.obj: ../Util/tinyxml2.h
+
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_assert.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_atomic.h
@@ -578,6 +585,7 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Entities/PlayerBullet.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Entities/PlayerEntity.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Entities/PlayerShip.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Abs/Factory.h
+CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../ConfigLoader.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Game.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../GameConstants.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Entities/SDLBonusEntity.h
@@ -589,5 +597,6 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/SDLController.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/SDLFactory.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Window/LTexture.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Window/SDLWindow.h
+CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Util/tinyxml2.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../main.cpp
 

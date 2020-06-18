@@ -44,6 +44,10 @@ CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.obj
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerShip.cpp
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerShip.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/GameConstants.h
+CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.obj
+ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/ConfigLoader.cpp
+ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/ConfigLoader.h
+ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Util/tinyxml2.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Controller.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/BonusEntity.h
@@ -520,6 +524,9 @@ CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.obj
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/LTexture.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/SDLWindow.cpp
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/SDLWindow.h
+CMakeFiles/SpaceInvaders.dir/Util/tinyxml2.cpp.obj
+ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Util/tinyxml2.cpp
+ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Util/tinyxml2.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj
  C:/MinGW/include/SDL2/SDL.h
  C:/MinGW/include/SDL2/SDL_assert.h
@@ -579,6 +586,7 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerEntity.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Entities/PlayerShip.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Abs/Factory.h
+ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/ConfigLoader.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Game.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/GameConstants.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Entities/SDLBonusEntity.h
@@ -590,4 +598,5 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/SDLFactory.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/LTexture.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/SDL/Window/SDLWindow.h
+ C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/Util/tinyxml2.h
  C:/Users/tomde/OneDrive - uantwerpen/School/6 Geavanceerde Programeertechnieken/SpaceInvaders/main.cpp

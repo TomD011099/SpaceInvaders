@@ -338,6 +338,33 @@ Abs/Entities/PlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Abs/Entities/PlayerShip.cpp.s
 .PHONY : Abs/Entities/PlayerShip.cpp.s
 
+ConfigLoader.obj: ConfigLoader.cpp.obj
+
+.PHONY : ConfigLoader.obj
+
+# target to build an object file
+ConfigLoader.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.obj
+.PHONY : ConfigLoader.cpp.obj
+
+ConfigLoader.i: ConfigLoader.cpp.i
+
+.PHONY : ConfigLoader.i
+
+# target to preprocess a source file
+ConfigLoader.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.i
+.PHONY : ConfigLoader.cpp.i
+
+ConfigLoader.s: ConfigLoader.cpp.s
+
+.PHONY : ConfigLoader.s
+
+# target to generate assembly for a file
+ConfigLoader.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/ConfigLoader.cpp.s
+.PHONY : ConfigLoader.cpp.s
+
 Game.obj: Game.cpp.obj
 
 .PHONY : Game.obj
@@ -608,6 +635,33 @@ SDL/Window/SDLWindow.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/Window/SDLWindow.cpp.s
 .PHONY : SDL/Window/SDLWindow.cpp.s
 
+Util/tinyxml2.obj: Util/tinyxml2.cpp.obj
+
+.PHONY : Util/tinyxml2.obj
+
+# target to build an object file
+Util/tinyxml2.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Util/tinyxml2.cpp.obj
+.PHONY : Util/tinyxml2.cpp.obj
+
+Util/tinyxml2.i: Util/tinyxml2.cpp.i
+
+.PHONY : Util/tinyxml2.i
+
+# target to preprocess a source file
+Util/tinyxml2.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Util/tinyxml2.cpp.i
+.PHONY : Util/tinyxml2.cpp.i
+
+Util/tinyxml2.s: Util/tinyxml2.cpp.s
+
+.PHONY : Util/tinyxml2.s
+
+# target to generate assembly for a file
+Util/tinyxml2.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Util/tinyxml2.cpp.s
+.PHONY : Util/tinyxml2.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -668,6 +722,9 @@ help:
 	@echo ... Abs/Entities/PlayerShip.obj
 	@echo ... Abs/Entities/PlayerShip.i
 	@echo ... Abs/Entities/PlayerShip.s
+	@echo ... ConfigLoader.obj
+	@echo ... ConfigLoader.i
+	@echo ... ConfigLoader.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
@@ -698,6 +755,9 @@ help:
 	@echo ... SDL/Window/SDLWindow.obj
 	@echo ... SDL/Window/SDLWindow.i
 	@echo ... SDL/Window/SDLWindow.s
+	@echo ... Util/tinyxml2.obj
+	@echo ... Util/tinyxml2.i
+	@echo ... Util/tinyxml2.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
