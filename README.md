@@ -1,10 +1,10 @@
-#SpaceInvaders
+# SpaceInvaders
 
 This game was created for a university project.
 
 One of the most important requirements was that we worked with the Abstract Factory paradigm so that is the reason this is used here.
 
-##Layout
+## Layout
 Because of the abstract factory paradigm, most of the code is divided into two folders/namespaces: 
 * Abs: This is where the abstract classes are stored, which are then implemented
 * SDL: Here is the implementation of the game for SDL2
