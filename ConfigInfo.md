@@ -1,6 +1,6 @@
-#Config file explained
+# Config file explained
 
-##Intro
+## Intro
 This game comes with a configuration file so the game can be modified to your specific needs/preferences.
 
 Here some info about that specific file.
@@ -26,7 +26,7 @@ The default values of the sprites and the game itself is originally designed for
 | Height | 700           | px   | int  |
 | FPS    | 60            | Hz   | int  |
 
-##Lives
+## Lives
 ```
 <Lives></Lives>
 ```
@@ -36,7 +36,7 @@ This one is very straightforward, it's just the amount of lives the player has.
 |--------|---------------|------| 
 | Lives  | 3             | int  | 
                            
-##Speed                    
+## Speed                    
 ```
 <Speed>
     <Player></Player>
@@ -55,7 +55,7 @@ The unit of the speed is the relative distance per second.
 | Enemy  | 0.04          | d/s  | double | 
 | Bonus  | 0.005         | d/s  | double |
 
-##Size
+## Size
 ```
 <Size>
     <Player>
@@ -89,7 +89,7 @@ Next up is size, there isn't much to say about this one, other than that the val
 | BonusWidth   | 0.1           | d    | double | 
 | BonusHeight  | 0.35          | d    | double |
 
-##Cooldown
+## Cooldown
 ```
 <Cooldown>
     <Enemy>
@@ -114,7 +114,7 @@ Because they are quite different they will each be explained in the table.
 | BonusSpawnRate     | 5             | %    | int    | The chance of a bonusentity spawning every <i>BonusSpawnCooldown</i> seconds
 | BonusSpawnCooldown | 0.25          | s    | double | See BonusSpawnRate
 
-##Lower bound
+## Lower bound
 ```
 <LowerBound></LowerBound>
 ```
@@ -124,7 +124,7 @@ If the enemies pass this line, you'll automatically lose.
 |--------------|---------------|------|--------| 
 | LowerBound   | 0.9           | d    | double | 
 
-##Scores
+## Scores
 ```
 <Scores>
     <E0></E0>
