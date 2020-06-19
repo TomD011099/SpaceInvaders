@@ -5,7 +5,9 @@ This game comes with a configuration file so the game can be modified to your sp
 
 Here some info about that specific file.
 
-<b><u>Important</u></b>: The values of the file are not checked, so the game can break if you change some of the values 
+**<u>Important:</u>** 
+* The values of the file are not checked, so the game can break if you change some of the values.
+* Because I used tintXML2, comments are not supported in the XML file and all settings have to be in the `<Settings>` field.
 
 ## Screen
 ```
@@ -16,6 +18,7 @@ Here some info about that specific file.
 </Screen>
 ```
 These are the screen parameters, they represent the settings about the screen.
+The default values of the sprites and the game itself is originally designed for a 10:7 aspect ratio for the screen.
 
 | Item   | Default Value | Unit | Type |
 |--------|---------------|------|------|
@@ -133,7 +136,7 @@ If the enemies pass this line, you'll automatically lose.
     <Neg></Neg>
 </Scores>
 ```
-The scores you get when killing enemies. For the generic enemies (E<i>x</i>) is 0 the backmost enemy and 4 the lowest enemy.
+The scores you get when killing enemies. For the generic enemies (E*x*) is 0 the backmost enemy and 4 the lowest enemy.
 
 | Item | Default Value | Type | 
 |------|---------------|------| 

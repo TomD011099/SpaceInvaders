@@ -19,8 +19,9 @@ All global variables and enumerators are stored in the Const folder.
 
 Last but not least, the <a href="ConfigInfo.md">config file</a>. This file is used to change game variables without having to recompile the game. 
 
-##Game field
+## Game field
 The game field is always normalized between 0 and 1 where 1 is the width/height of the screen. 
+The unit of these values is represented as *d* in the <a href="ConfigInfo.md">config file</a>.
 
 ``` 
    0              1
