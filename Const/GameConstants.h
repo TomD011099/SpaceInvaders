@@ -3,6 +3,7 @@
 
 #include <chrono>
 #include <map>
+#include <iostream>
 
 #include "Enums.h"
 
@@ -79,7 +80,13 @@ public:
 private:
     GameConstants(std::map<std::string, std::string>);
 
+    void setInt(std::string, int, int &);
+
+    void setDouble(std::string, double, double &);
+
     static GameConstants* instance;
+
+    std::map<std::string, std::string> settings;
 
     // Screen settings
     int screenWidth;        //[px]

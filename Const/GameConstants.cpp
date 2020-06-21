@@ -12,246 +12,94 @@ GameConstants* GameConstants::getInstance() {
     return instance;
 }
 
+void GameConstants::setInt(std::string xmlEntry, int defaultVal, int &var) {
+    auto it = settings.find(xmlEntry);
+    var = defaultVal;
+    if (it != settings.end()) {
+        if (it->second != "default") {
+            try {
+                var = stoi(it->second);
+            } catch (const std::invalid_argument &e) {
+                std::cout << "ERR: " << xmlEntry << " not valid\n";
+            }
+        }
+    }
+}
+
+void GameConstants::setDouble(std::string xmlEntry, double defaultVal, double &var) {
+    auto it = settings.find(xmlEntry);
+    var = defaultVal;
+    if (it != settings.end()) {
+        if (it->second != "default") {
+            try {
+                var = stod(it->second);
+            } catch (const std::invalid_argument &e) {
+                std::cout << "ERR: " << xmlEntry << " not valid\n";
+            }
+        }
+    }
+}
+
 GameConstants::GameConstants(std::map<std::string, std::string> settings) {
-    auto it = settings.find("Screen.Width");
-    screenWidth = 1000;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            screenWidth = stoi(it->second);
-        }
-    }
+    this->settings = settings;
 
-    it = settings.find("Screen.Height");
-    screenHeight = 700;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            screenHeight = stoi(it->second);
-        }
-    }
+    setInt("Screen.Width", 1000, screenWidth);
 
-    it = settings.find("Screen.FPS");
-    screenFPS = 60;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            screenFPS = stoi(it->second);
-        }
-    }
+    setInt("Screen.Height", 700, screenHeight);
 
-    it = settings.find("Lives");
-    maxLives = 3;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            maxLives = stoi(it->second);
-        }
-    }
+    setInt("Screen.FPS", 60, screenFPS);
 
-    it = settings.find("Speed.Player");
-    playerSpeed = 0.5;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            playerSpeed = stod(it->second);
-        }
-    }
+    setInt("Lives", 3, maxLives);
 
-    it = settings.find("Speed.Bullet");
-    bulletSpeed = 0.8;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            bulletSpeed = stod(it->second);
-        }
-    }
+    setDouble("Speed.Player", 0.5, playerSpeed);
 
-    it = settings.find("Speed.Enemy");
-    enemySpeed = 0.04;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            enemySpeed = stod(it->second);
-        }
-    }
+    setDouble("Speed.Bullet", 0.8, bulletSpeed);
 
-    it = settings.find("Speed.Bonus");
-    bonusSpeed = 0.005;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            bonusSpeed = stod(it->second);
-        }
-    }
+    setDouble("Speed.Enemy", 0.04, enemySpeed);
 
-    it = settings.find("Size.Player.Width");
-    playerWidth = 0.05;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            playerWidth = stod(it->second);
-        }
-    }
+    setDouble("Speed.Bonus", 0.005, bonusSpeed);
 
-    it = settings.find("Size.Player.Height");
-    playerHeight = 0.05;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            playerHeight = stod(it->second);
-        }
-    }
+    setDouble("Size.Player.Width", 0.05, playerWidth);
 
-    it = settings.find("Size.Enemy.Width");
-    enemyWidth = 0.05;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            enemyWidth = stod(it->second);
-        }
-    }
+    setDouble("Size.Player.Height", 0.05, playerHeight);
 
-    it = settings.find("Size.Enemy.Height");
-    enemyHeight = 0.04;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            enemyHeight = stod(it->second);
-        }
-    }
+    setDouble("Size.Enemy.Width", 0.05, enemyWidth);
 
-    it = settings.find("Size.Bullet.Width");
-    bulletWidth = 0.005;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            bulletWidth = stod(it->second);
-        }
-    }
+    setDouble("Size.Enemy.Height", 0.04, enemyHeight);
 
-    it = settings.find("Size.Bullet.Height");
-    bulletHeight = 0.03;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            bulletHeight = stod(it->second);
-        }
-    }
+    setDouble("Size.Bullet.Width", 0.005, bulletWidth);
 
-    it = settings.find("Size.Bonus.Width");
-    bonusWidth = 0.1;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            bonusWidth = stod(it->second);
-        }
-    }
+    setDouble("Size.Bullet.Height", 0.03, bulletHeight);
 
-    it = settings.find("Size.Bonus.Height");
-    bonusHeight = 0.05;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            bonusHeight = stod(it->second);
-        }
-    }
+    setDouble("Size.Bonus.Width", 0.1, bonusWidth);
 
-    it = settings.find("Cooldown.Enemy.Shooting");
-    enemyShootCooldown = 0.35;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            enemyShootCooldown = stod(it->second);
-        }
-    }
+    setDouble("Size.Bonus.Height", 0.05, bonusHeight);
 
-    it = settings.find("Cooldown.Enemy.Movement");
-    enemyMovementDelay = 1;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            enemyMovementDelay = stod(it->second);
-        }
-    }
+    setDouble("Cooldown.Enemy.Shooting", 0.35, enemyShootCooldown);
 
-    it = settings.find("Cooldown.Enemy.Death");
-    enemyDeathTime = 0.5;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            enemyDeathTime = stod(it->second);
-        }
-    }
+    setDouble("Cooldown.Enemy.Movement", 1, enemyMovementDelay);
 
-    it = settings.find("Cooldown.Bonus.SpawnRate");
-    bonusSpawnRate = 5;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            bonusSpawnRate = stoi(it->second);
-        }
-    }
+    setDouble("Cooldown.Enemy.Death", 0.5, enemyDeathTime);
 
-    it = settings.find("Cooldown.Bonus.SpawnCooldown");
-    bonusSpawnCooldown = 0.25;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            bonusSpawnCooldown = stod(it->second);
-        }
-    }
+    setInt("Cooldown.Bonus.SpawnRate", 5, bonusSpawnRate);
 
-    it = settings.find("LowerBound");
-    lowerBound = 0.9;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            lowerBound = stod(it->second);
-        }
-    }
+    setDouble("Cooldown.Bonus.SpawnCooldown", 0.25, bonusSpawnCooldown);
 
-    it = settings.find("LowerBound");
-    lowerBound = 0.9;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            lowerBound = stod(it->second);
-        }
-    }
+    setDouble("LowerBound", 0.9, lowerBound);
 
-    it = settings.find("Scores.E0");
-    scores[ENEMYSHIP0] = 100;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            scores[ENEMYSHIP0] = stoi(it->second);
-        }
-    }
+    setInt("Scores.E0", 100, scores[ENEMYSHIP0]);
 
-    it = settings.find("Scores.E1");
-    scores[ENEMYSHIP1] = 80;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            scores[ENEMYSHIP1] = stoi(it->second);
-        }
-    }
+    setInt("Scores.E1", 80, scores[ENEMYSHIP1]);
 
-    it = settings.find("Scores.E2");
-    scores[ENEMYSHIP2] = 60;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            scores[ENEMYSHIP2] = stoi(it->second);
-        }
-    }
+    setInt("Scores.E2", 60, scores[ENEMYSHIP2]);
 
-    it = settings.find("Scores.E3");
-    scores[ENEMYSHIP3] = 40;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            scores[ENEMYSHIP3] = stoi(it->second);
-        }
-    }
+    setInt("Scores.E3", 40, scores[ENEMYSHIP3]);
 
-    it = settings.find("Scores.E4");
-    scores[ENEMYSHIP4] = 20;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            scores[ENEMYSHIP4] = stoi(it->second);
-        }
-    }
+    setInt("Scores.E4", 20, scores[ENEMYSHIP4]);
 
-    it = settings.find("Scores.Pos");
-    scores[POSBONUS] = 200;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            scores[POSBONUS] = stoi(it->second);
-        }
-    }
+    setInt("Scores.Pos", 200, scores[POSBONUS]);
 
-    it = settings.find("Scores.Neg");
-    scores[NEGBONUS] = -200;
-    if (it != settings.end()) {
-        if (it->second != "default") {
-            scores[NEGBONUS] = stoi(it->second);
-        }
-    }
+    setInt("Scores.Neg", -200, scores[NEGBONUS]);
 
     normPlayerSpeed = playerSpeed / screenFPS;
     normBulletSpeed = bulletSpeed / screenFPS;

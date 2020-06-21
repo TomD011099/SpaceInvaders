@@ -7,7 +7,7 @@ Here some info about that specific file.
 
 **<u>Important:</u>** 
 * The values of the file are not checked, so the game can break if you change some of the values.
-* Because I used tintXML2, comments are not supported in the XML file and all settings have to be in the `<Settings>` field.
+* Because I used tinyXML2, comments are not supported in the XML file and all settings have to be in the `<Settings>` field.
 
 ## Screen
 ```
@@ -19,6 +19,7 @@ Here some info about that specific file.
 ```
 These are the screen parameters, they represent the settings about the screen.
 The default values of the sprites and the game itself is originally designed for a 10:7 aspect ratio for the screen.
+FPS is not only the refresh rate of the screen, it's also the tick rate of the game.
 
 | Item   | Default Value | Unit | Type |
 |--------|---------------|------|------|
