@@ -8,8 +8,7 @@
 #include "Enums.h"
 
 /**
- * This file is a sort of config file for SpaceInvaders, here you can decide the screen size, FPS, lives, ...
- * [...] means the unit of the constant
+ * This class houses all game constants and parses them from an XML file
  */
 class GameConstants {
 public:
@@ -130,7 +129,7 @@ private:
     double bonusSpawnCooldown;      //[seconds]
 
     //Game over when enemy crosses bound
-    double lowerBound = 0.9;
+    double lowerBound;              //[Relative distance]
 
     //Scores
     std::map<ENTITY, int> scores = {};

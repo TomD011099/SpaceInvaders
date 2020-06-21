@@ -2,16 +2,31 @@
 
 GameConstants* GameConstants::instance = nullptr;
 
+/**
+ * Used to create the object and parse all data
+ */
 void GameConstants::initInstance(std::map<std::string, std::string> settings) {
     if (instance == nullptr) {
         instance = new GameConstants(settings);
     }
 }
 
+/**
+ * Get the instance of GameConstants
+ *
+ * @return the instance
+ */
 GameConstants* GameConstants::getInstance() {
     return instance;
 }
 
+/**
+ * Set one of the constants of type int
+ *
+ * @param xmlEntry The XML value to look for, parsed as "<Parent>.<Child>"
+ * @param defaultVal The default value of var
+ * @param var The variable to set
+ */
 void GameConstants::setInt(std::string xmlEntry, int defaultVal, int &var) {
     auto it = settings.find(xmlEntry);
     var = defaultVal;
@@ -26,6 +41,13 @@ void GameConstants::setInt(std::string xmlEntry, int defaultVal, int &var) {
     }
 }
 
+/**
+ * Set one of the constants of type double
+ *
+ * @param xmlEntry The XML value to look for, parsed as "<Parent>.<Child>"
+ * @param defaultVal The default value of var
+ * @param var The variable to set
+ */
 void GameConstants::setDouble(std::string xmlEntry, double defaultVal, double &var) {
     auto it = settings.find(xmlEntry);
     var = defaultVal;
@@ -40,6 +62,11 @@ void GameConstants::setDouble(std::string xmlEntry, double defaultVal, double &v
     }
 }
 
+/**
+ * The constructor of GameConstants
+ *
+ * @param settings A map of the parsed XML file
+ */
 GameConstants::GameConstants(std::map<std::string, std::string> settings) {
     this->settings = settings;
 
